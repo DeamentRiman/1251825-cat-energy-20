@@ -1,0 +1,37 @@
+// Начните писать стили здесь
+@font-face {
+  font-family: "Oswald";
+  font-weight: 400;
+  font-style: normal;
+  src: local(""),
+    url("../fonts/oswaldregular.woff"),
+    url("../fonts//oswaldregular.woff2");
+  color: var(--basic-black);
+}
+
+@font-face {
+  font-family: "Oswald";
+  font-weight: 500;
+  font-style: normal;
+  src: local(""),
+    url("../fonts/oswaldmedium.woff"),
+    url("../fonts/oswaldmedium.woff2");
+  color: var(--basic-black);
+}
+.main-text(@font-family; @font-size; @line-height) {
+  font-family: @font-family;
+  font-size: @font-size;
+  line-height: @line-height;
+  font-weight: 400;
+  font-style: normal;
+  color: var(--basic-black);
+}
+
+.h2-title(@font-family;@font-size; @line-height) {
+  font-family: @font-family;
+  font-size: @font-size;
+  line-height: @line-height;
+  font-style: normal;
+  font-weight: 400;
+  color: var(--basic-black);
+}

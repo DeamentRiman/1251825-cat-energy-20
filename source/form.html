@@ -3,6 +3,7 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Кэт энерджи</title>
+    <link href="css/style.css" rel="stylesheet">
   </head>
 
   <body class="page__body">
@@ -24,11 +25,11 @@
     </header>
 
     <main class="page-main">
-      <h1 class="page-main__title title-text">Подбор программы</h1>
+      <h1 class="page-main__title">Подбор программы</h1>
       <form class="form" action="http://echo.htmlacademy.ru">
 
         <fieldset class="form-fieldset">
-          <legend class="form-legend">Заполните анкету, и мы подберем программу питания для вашего кота</legend>
+          <legend class="form-legend form-legend--wrapper">Заполните анкету, и мы подберем программу питания для вашего кота</legend>
           <div class="form-item">
             <label class="form-item__label" for="form_name">Имя:*</label>
             <input class="form-item__input-text" type="text" id="form_name" name="name" placeholder="Барсик">
@@ -73,29 +74,29 @@
 
         <fieldset class="form-fieldset">
           <legend class="form-legend">Комментарии</legend>
-          <input type="form-item__input-text" placeholder="Расскажите обо всех повадках кота">
+          <input class="form-item__input-text" placeholder="Расскажите обо всех повадках кота">
         </fieldset>
 
         <fieldset class="form-fieldset">
           <legend class="form-legend">Дополнительно</legend>
           <div class="form-item">
             <input class="form-item__input-checkbox" type="checkbox" name="sweetener" id="filter_sweetener" checked>
-            <label class="form-item__input-text form-content" for="filter_sweetener">Сахарозаменитель</label>
+            <label class="form-item__input-text form-item__input-text--wrapper" for="filter_sweetener">Сахарозаменитель</label>
           </div>
           <div class="form-item">
             <input class="form-item__input-checkbox" type="checkbox" name="water" id="filter_water">
-            <label class="form-item__input-text" for="filter_water">Питьевая вода</label>
+            <label class="form-item__input-text form-item__input-text--wrapper" for="filter_water">Питьевая вода</label>
           </div>
           <div class="form-item">
             <input class="form-item__input-checkbox" type="checkbox" name="milk" id="filter_milk">
-            <label class="form-item__input-text" for="filter_milk">Молоко</label>
+            <label class="form-item__input-text form-item__input-text--wrapper" for="filter_milk">Молоко</label>
           </div>
           <div class="form-item">
             <input class="form-item__input-checkbox" type="checkbox" name="vitamins" id="filter_vitamins">
-            <label class="form-item__input-text" for="filter_vitamins">Витамины</label>
+            <label class="form-item__input-text form-item__input-text--wrapper" for="filter_vitamins">Витамины</label>
           </div>
         </fieldset>
-        <button class="button" type="submit">Отправить заявку</button>
+        <button class="button button-wrapper" type="submit">Отправить заявку</button>
         <p class="form-comment">* - Обязательные поля</p>
       </form>
     </main>

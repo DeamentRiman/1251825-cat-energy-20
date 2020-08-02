@@ -3,6 +3,7 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Кэт энерджи</title>
+    <link href="css/style.css" rel="stylesheet">
   </head>
 
   <body class="page__body">
@@ -16,7 +17,7 @@
       <nav class="page-nav">
         <button class="page-nav__toggle" type="button"><span class="visyally-hidden">Открыть меню</span></button>
         <ul class="page-nav__list">
-          <li class="page-nav__list-item"><a>Главная</a></li>
+          <li class="page-nav__list-item"><a href="index.html">Главная</a></li>
           <li class="page-nav__list-item page-nav__list-item--active"><a href="catalog.html">Каталог продукции</a></li>
           <li class="page-nav__list-item"><a href="form.html">Подбор программы</a></li>
         </ul>
@@ -26,7 +27,7 @@
     <main class="page-main">
 
       <section class="catalog">
-        <h1 class="catalog__title title-text">Каталог продукции</h1>
+        <h1 class="catalog__title">Каталог продукции</h1>
         <article class="catalog__item">
           <img alt="Корм Cat energy pro 500 г">
           <h3 class="catalog__item-name">
@@ -34,19 +35,19 @@
           </h3>
           <table class="catalog__table">
             <tr class="catalog__table-sell">
-              <th>Объем</th>
-              <td>500 г</td>
+              <th class="catalog__table-sell">Масса</th>
+              <td class="catalog__table-sell">500 г</td>
             </tr>
             <tr class="catalog__table-sell">
-              <th>Вкус</th>
-              <td>Курица</td>
+              <th class="catalog__table-sell">Вкус</th>
+              <td class="catalog__table-sell">Курица</td>
             </tr>
             <tr class="catalog__table-sell">
-              <th>Цена</th>
-              <td>700 P.</td>
+              <th class="catalog__table-sell">Цена</th>
+              <td class="catalog__table-sell">700 P.</td>
             </tr>
           </table>
-          <a href="#" class="button">Заказать</a>
+          <a href="#" class="button button--catalog">Заказать</a>
         </article>
         <article class="catalog__item">
           <img alt="Корм Cat energy pro 1000 г">
@@ -55,19 +56,19 @@
           </h3>
           <table class="catalog__table">
             <tr class="catalog__table-sell">
-              <th>Объем</th>
-              <td>1000 г</td>
+              <th class="catalog__table-sell">Масса</th>
+              <td class="catalog__table-sell">1000 г</td>
             </tr>
             <tr class="catalog__table-sell">
-              <th>Вкус</th>
-              <td>Курица</td>
+              <th class="catalog__table-sell">Вкус</th>
+              <td class="catalog__table-sell">Курица</td>
             </tr>
             <tr class="catalog__table-sell">
-              <th>Цена</th>
-              <td>1000 P.</td>
+              <th class="catalog__table-sell">Цена</th>
+              <td class="catalog__table-sell">1000 P.</td>
             </tr>
           </table>
-          <a href="#" class="button">Заказать</a>
+          <a href="#" class="button button--catalog">Заказать</a>
         </article>
         <article class="catalog__item">
           <img alt="Корм Cat energy pro 500 г">
@@ -76,19 +77,19 @@
           </h3>
           <table class="catalog__table">
             <tr class="catalog__table-sell">
-              <th>Объем</th>
-              <td>500 г</td>
+              <th class="catalog__table-sell">Масса</th>
+              <td class="catalog__table-sell">500 г</td>
             </tr>
             <tr class="catalog__table-sell">
-              <th>Вкус</th>
-              <td>Рыба</td>
+              <th class="catalog__table-sell">Вкус</th>
+              <td class="catalog__table-sell">Рыба</td>
             </tr>
             <tr class="catalog__table-sell">
-              <th>Цена</th>
-              <td>700 P.</td>
+              <th class="catalog__table-sell">Цена</th>
+              <td class="catalog__table-sell">700 P.</td>
             </tr>
           </table>
-          <a href="#" class="button">Заказать</a>
+          <a href="#" class="button button--catalog">Заказать</a>
         </article>
         <article class="catalog__item">
           <img alt="Корм Cat energy pro 1000 г">
@@ -97,19 +98,19 @@
           </h3>
           <table class="catalog__table">
             <tr class="catalog__table-sell">
-              <th>Объем</th>
-              <td>1000 г</td>
+              <th class="catalog__table-sell">Масса</th>
+              <td class="catalog__table-sell">1000 г</td>
             </tr>
             <tr class="catalog__table-sell">
-              <th>Вкус</th>
-              <td>Рыба</td>
+              <th class="catalog__table-sell">Вкус</th>
+              <td class="catalog__table-sell">Рыба</td>
             </tr>
             <tr class="catalog__table-sell">
-              <th>Цена</th>
-              <td>1000 P.</td>
+              <th class="catalog__table-sell">Цена</th>
+              <td class="catalog__table-sell">1000 P.</td>
             </tr>
           </table>
-          <a href="#" class="button">Заказать</a>
+          <a href="#" class="button button--catalog">Заказать</a>
         </article>
         <article class="catalog__item">
           <img alt="Корм Cat energy slim 500 г">
@@ -118,19 +119,19 @@
           </h3>
           <table class="catalog__table">
             <tr class="catalog__table-sell">
-              <th>Объем</th>
-              <td>500 г</td>
+              <th class="catalog__table-sell">Масса</th>
+              <td class="catalog__table-sell">500 г</td>
             </tr>
             <tr class="catalog__table-sell">
-              <th>Вкус</th>
-              <td>Гречка</td>
+              <th class="catalog__table-sell">Вкус</th>
+              <td class="catalog__table-sell">Гречка</td>
             </tr>
             <tr class="catalog__table-sell">
-              <th>Цена</th>
-              <td>400 P.</td>
+              <th class="catalog__table-sell">Цена</th>
+              <td class="catalog__table-sell">400 P.</td>
             </tr>
           </table>
-          <a href="#" class="button">Заказать</a>
+          <a href="#" class="button button--catalog">Заказать</a>
         </article>
         <article class="catalog__item">
           <img alt="Корм Cat energy slim 1000 г">
@@ -139,19 +140,19 @@
           </h3>
           <table class="catalog__table">
             <tr class="catalog__table-sell">
-              <th>Объем</th>
-              <td>1000 г</td>
+              <th class="catalog__table-sell">Масса</th>
+              <td class="catalog__table-sell">1000 г</td>
             </tr>
             <tr class="catalog__table-sell">
-              <th>Вкус</th>
-              <td>Гречка</td>
+              <th class="catalog__table-sell">Вкус</th>
+              <td class="catalog__table-sell">Гречка</td>
             </tr>
             <tr class="catalog__table-sell">
-              <th>Цена</th>
-              <td>700 P.</td>
+              <th class="catalog__table-sell">Цена</th>
+              <td class="catalog__table-sell">700 P.</td>
             </tr>
           </table>
-          <a href="#" class="button">Заказать</a>
+          <a href="#" class="button button--catalog">Заказать</a>
         </article>
         <article class="catalog__item">
           <img alt="Корм Cat energy slim 500 г">
@@ -160,24 +161,24 @@
           </h3>
           <table class="catalog__table">
             <tr class="catalog__table-sell">
-              <th>Объем</th>
-              <td>500 г</td>
+              <th class="catalog__table-sell">Масса</th>
+              <td class="catalog__table-sell">500 г</td>
             </tr>
             <tr class="catalog__table-sell">
-              <th>Вкус</th>
-              <td>Рис</td>
+              <th class="catalog__table-sell">Вкус</th>
+              <td class="catalog__table-sell">Рис</td>
             </tr>
             <tr class="catalog__table-sell">
-              <th>Цена</th>
-              <td>500 P.</td>
+              <th class="catalog__table-sell">Цена</th>
+              <td class="catalog__table-sell">500 P.</td>
             </tr>
           </table>
-          <a href="#" class="button">Заказать</a>
+          <a href="#" class="button button--catalog">Заказать</a>
         </article>
         <div class="catalog-plus">
           <p class="catalog-plus__text">Показать еще 100500 товаров</p>
-          <p class="catalog-plus__text">На самом деле вкусов гораздо больше!</p>
-          <a href="#" class="button catalog-plus__button">Показать все</a>
+          <p class="catalog-plus__text-comment">На самом деле вкусов гораздо больше!</p>
+          <a href="#" class="button button--catalog catalog-plus__button">Показать все</a>
         </div>
       </section>
       <section class="additions">
@@ -190,7 +191,7 @@
               <td class="additions__table-item">200 P.</td>
             </tr>
           </table>
-          <a class="button" href="#">Заказать</a>
+          <a class="button button--catalog" href="#">Заказать</a>
         </article>
         <article class="additions__item">
           <h3 class="additions__item-title">Питьевая вода</h3>
@@ -200,7 +201,7 @@
               <td class="additions__table-item">50 P.</td>
             </tr>
           </table>
-          <a class="button" href="#">Заказать</a>
+          <a class="button button--catalog" href="#">Заказать</a>
         </article>
         <article class="additions__item">
           <h3 class="additions__item-title">Молоко</h3>
@@ -210,7 +211,7 @@
               <td class="additions__table-item">100 P.</td>
             </tr>
           </table>
-          <a class="button" href="#">Заказать</a>
+          <a class="button button--catalog" href="#">Заказать</a>
         </article>
         <article class="additions__item">
           <h3 class="additions__item-title">Витамины</h3>
@@ -220,7 +221,7 @@
               <td class="additions__table-item">300 P.</td>
             </tr>
           </table>
-          <a class="button" href="#">Заказать</a>
+          <a class="button button--catalog" href="#">Заказать</a>
         </article>
       </section>
       <section class="surprise">
