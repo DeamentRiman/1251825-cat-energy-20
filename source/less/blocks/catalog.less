@@ -1,48 +1,281 @@
 // Начните писать стили здесь
+.catalog {
+  display: flex;
+  flex-direction: column;
+
+  @media (min-width: @tablet-width) {
+    margin: 0 30px;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin: 0 110px;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+}
+
 .catalog__title {
+  flex-grow: 1;
   .main-text(36px; 36px);
   padding-top: 27px;
   padding-bottom: 41px;
+  text-align: center;
+
+  @media (min-width: @tablet-width) {
+    .main-text(60px; 60px);
+    padding: 0;
+    margin-top: 64px;
+    margin-bottom: 84px;
+    text-align: left;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 100%;
+    padding: 0;
+    .main-text(60px; 60px);
+    margin-top: 74px;
+    margin-bottom: 83px;
+    text-align: left;
+  }
 }
 
 .catalog__item {
-  margin-bottom: 19px;
+  padding: 0 20px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  /*max-width: 280px;*/
+  /*margin-bottom: 19px;*/
   padding-top: 11px;
-  padding-bottom: 14px;
+  padding-bottom: 25px;
+  border-top: 1px solid var(--basic-border-catalog);
+  position: relative;
+  /*outline: 1px solid lightcoral;*/
+  z-index: 10;
+
+  @media (min-width: @tablet-width) {
+    padding: 0;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    width: 324px;
+    height: 511px;
+    outline: 1px solid hotpink;
+    margin-right: 0;
+    margin-bottom: 59px;
+    border: none;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding: 0;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    width: 245px;
+    height: 511px;
+    outline: 1px solid hotpink;
+    margin-right: 80px;
+    margin-bottom: 63px;
+    border: none;
+  }
+}
+
+.catalog__item:nth-child(2n) {
+  @media (min-width: @tablet-width) {
+    margin-right: 60px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-right: 80px;
+  }
+}
+
+.catalog__item:nth-child(4n+1) {
+  @media (min-width: @desktop-width) {
+    margin-right: 0;
+  }
+}
+
+.catalog__item-img {
+  width: 138px;
+  height: 112px;
+  outline: 1px solid green;
+
+  @media (min-width: @tablet-width) {
+    position: absolute;
+    left: 78px;
+    top: 0;
+    background-color: yellowgreen;
+    width: 168px;
+    height: 200px;
+    z-index: 15;
+  }
+
+  @media (min-width: @desktop-width) {
+    position: absolute;
+    left: 39px;
+    top: 0;
+    background-color: yellowgreen;
+    width: 172px;
+    height: 196px;
+    z-index: 15;
+  }
+}
+
+.catalog__item-text::before {
+  @media (min-width: @tablet-width) {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background-color: var(--basic-grey);
+    width: 100%;
+    height: 430px;
+    z-index: -1;
+  }
+
+  @media (min-width: @desktop-width) {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background-color: var(--basic-grey);
+    width: 100%;
+    height: 431px;
+    z-index: -1;
+  }
+}
+
+.catalog__item-text:last-child::before {
+  @media (min-width: @tablet-width) and (min-width: @desktop-width) {
+    background-color: var(--basic-font-white);
+    border: 2px solid var(--basic-grey);
+  }
 }
 
 .catalog__item-name {
-  .main-text(16px; 20px);
+  width: 138px;
+  /*.main-text(16px; 20px);*/
+  font-family: "Oswald", sans-serif;
+  font-size: 16px;
+  line-height: 20px;
+  font-weight: 400;
   text-transform: uppercase;
   color: var(--basic-catalog-title);
+  max-width: 77px;
+  z-index: 5;
+
+  @media (min-width: @tablet-width) {
+    margin: 234px 72px 21px 78px;
+    font-size: 20px;
+    line-height: 24px;
+    max-width: 174px;
+    text-align: center;
+    padding: 0 20px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding: 0;
+    margin: 243px 47px 21px 53px;
+    font-size: 20px;
+    line-height: 24px;
+    max-width: 174px;
+    text-align: center;
+  }
+}
+
+.catalog__table {
+  width: 142px;
+
+  @media (min-width: @tablet-width) {
+    width: 247px;
+    margin: 0 39px 33px 36px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 166px;
+    margin: 0 40px 33px 39px;
+  }
 }
 
 .catalog__table-sell {
-  font-family: Arial,sans-serif;
+  font-family: "Arial", sans-serif;
   .main-text(12px; 16px);
+  font-weight: 400;
   color: var(--basic-dark-grey);
   text-align: left;
+
+  @media (min-width: @tablet-width) {
+    .main-text(16px; 16px);
+    padding-top: 7px;
+    padding-bottom: 9px;
+    border-bottom: 1px solid var(--basic-border-light-grey);
+  }
+
+  @media (min-width: @desktop-width) {
+    .main-text(16px; 16px);
+    color: var(--basic-dark-grey);
+    padding-top: 7px;
+    padding-bottom: 9px;
+    border-bottom: 1px solid var(--basic-border-light-grey);
+  }
 }
 
-.button--catalog {
-  .main-text(16px; 16px);
-  color: var(--basic-font-white);
-  text-transform: uppercase;
+.catalog__table-sell--wrapper {
+  text-align: right;
 }
 
-.catalog-plus__text {
+.catalog__plus {
+  margin-top: 26px;
+  text-align: center;
+  /*padding-bottom: 25px;*/
+  border-bottom: 1px solid var(--basic-border-catalog);
+  width: 280px;
+
+  @media (min-width: @tablet-width) {
+    margin-top: 0;
+    width: 324px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-top: 0;
+    width: 245px;
+  }
+}
+
+.catalog__plus-text {
   .main-text(16px; 20px);
   text-transform: uppercase;
+  margin-top: 53px;
+  margin-bottom: 8px;
   color: var(--basic-light-black);
+
+  @media (min-width: @tablet-width) {
+    margin: 234px 90px 23px 90px;
+    .main-text(20px; 22px);
+    text-align: center;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin: 243px 55px 23px 56px;
+    .main-text(20px; 22px);
+    text-align: center;
+  }
 }
 
-.catalog-plus__text-comment {
-  font-family: "Arial",sans-serif;
+.catalog__plus-text-comment {
+  font-family: "Arial", sans-serif;
   .main-text(12px; 16px);
   color: var(--basic-dark-grey);
-}
 
-.catalog-plus__button {
-  background-color: var(--basic-grey);
-  color: var(--basic-dark-grey);
+  @media (min-width: @tablet-width) {
+    .main-text(16px; 18px);
+    margin: 0 75px 87px 76px;
+  }
+
+  @media (min-width: @desktop-width) {
+    .main-text(16px; 18px);
+    margin: 0 39px 87px 39px;
+  }
 }

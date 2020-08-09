@@ -2,19 +2,20 @@
 <html class="page" lang="ru">
   <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
     <title>HTML Academy: Кэт энерджи</title>
     <link href="css/style.css" rel="stylesheet">
   </head>
 
   <body class="page__body">
 
-    <header class="page-header">
+    <header class="page-header container">
       <a class="logo" href="index.html">
-        <img class="logo__small" alt="Логотип магазина Кэт энерджи">
-        <img class="logo__title" alt="Логотип магазина Cat Energy">
+        <img src="img/logo-mobile.svg" width="191" height="38" class="logo__small" alt="Логотип магазина Кэт энерджи">
+        <!--<img class="logo__title" alt="Логотип магазина Cat Energy">-->
       </a>
       <nav class="page-nav">
-        <button class="page-nav__toggle" type="button"><span class="visyally-hidden">Открыть меню</span></button>
+        <button class="page-nav__toggle" type="button"><span class="visually-hidden">Открыть меню</span></button>
         <ul class="page-nav__list">
           <li class="page-nav__list-item page-nav__list-item--active">Главная</li>
           <li class="page-nav__list-item"><a href="catalog.html">Каталог продукции</a></li>
@@ -24,8 +25,9 @@
     </header>
 
     <main class="page-main">
+
       <section class="promo">
-        <h1 class="promo__title">Функциональное питание для котов</h2>
+        <h1 class="promo__title">Функциональное <br> питание для котов</h2>
         <p class="promo__description">Занялся собой? Займись котом!</p>
         <!--Фоновое изображение + картинка товара - псевдоэлемент-->
         <a href="form.html" class="button">Подобрать программу</a>
@@ -34,7 +36,7 @@
       <section class="product">
         <div class="product__item">
           <!--картинка - псевдоэлемент кошки-фитоняшки-->
-          <h3 class="product__item-title">Похудение</h3>
+          <h2 class="product__item-title">Похудение</h3>
           <p class="product__item-text">
             Ваш кот весит больше собаки и почти утратил способность лазить по деревьям? Пора на диету! Cat Energy Slim поможет вашему питомцу сбросить лишний вес.
           </p>
@@ -42,7 +44,7 @@
         </div>
         <div class="product__item">
           <!--картинка - псевдоэлемент кошки-атлета-->
-          <h3 class="product__item-title">Набор массы</h3>
+          <h2 class="product__item-title">Набор массы</h3>
             <p class="product__item-text">
               Заработать авторитет среди дворовых котов и даже собак? Серия Cat Energy Pro поможет вашему коту нарастить необходимые мышцы!
             </p>
@@ -74,14 +76,16 @@
       <section class="example">
         <h2 class="example__title">Живой пример</h2>
         <p class="example__description">Борис сбросил 5 кг за 2 месяца, просто заменив свой обычный корм на Cat Energy Slim. Отличный результат без изнуряющих тренировок! При этом он не менял своих привычек и по-прежнему спит по 16 часов в день.</p>
-        <div class="example__item">
+        <ul class="example__item">
+          <li class="example__item-list">
             <p class="example__item-value">5 кг</p>
             <p class="example__item-comment">снижение веса</p>
-        </div>
-        <div class="example__item">
+          </li>
+          <li class="example__item-list">
             <p class="example__item-value"> 60 дней</p>
             <p class="example__item-comment">затрачено времени</p>
-        </div>
+          </li>
+        </ul>
         <p class="example__total-price">Затраты на питание: 15000 руб.</p>
         <div class="example__wrapper slider">
           <ul class="slider__items">
@@ -102,19 +106,19 @@
 
     <footer class="page-footer">
       <section class="contact">
-        <h2 class="contact__title">
+        <p class="contact__title ">
           Приглашаем к сотрудничеству диллеров!
-        </h2>
+        </p>
         <p class="contact__text">
           ул. Большая Конюшенная, д. 19/8 Санкт-Петербург
         </p>
-        <div class="contact__map">
+      </section>
+      <section class="map">
           <!-- место для карты -->
-        </div>
       </section>
       <section class="link">
         <div class="link__logo">
-          <img scr="#" alt="Логотип Cat Energy">
+          <img src="img/logo-footer.svg" width="128" height="24" alt="Логотип Cat Energy">
         </div>
         <div class="link__social">
               <a class="link__social-item" href="#">
@@ -130,7 +134,7 @@
         <div class="link__academy">
           <a href="https://htmlacademy.ru/intensive/adaptive" class="link__academy-link">HTML Academy</a>
           <a href="https://htmlacademy.ru/intensive/adaptive" class="link__academy-link">
-            <img alt="Логотип HTML Academy">
+            <img src="img/htmlacademy.svg" width="27" height="34" alt="Логотип HTML Academy">
           </a>
         </div>
       </section>

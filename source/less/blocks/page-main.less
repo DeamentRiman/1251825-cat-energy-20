@@ -1,10 +1,20 @@
 // Начните писать стили здесь
 .page-main {
-  outline: 3px solid sandybrown;
+  display: flex;
+  flex-direction: column;
 }
 
 .page-main__title {
   .main-text(36px;40px);
   margin-top: 27px;
-  margin-bottom: 37px;
+  /*margin-bottom: 37px;*/
+
+  @media (min-width: @tablet-width) {
+    .main-text(60px;60px);
+    margin-top: 64px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-top: 74px;
+  }
 }

@@ -1,12 +1,73 @@
 // Начните писать стили здесь
+.contact {
+  display: flex;
+  padding-top: 28px;
+  padding-bottom: 22px;
+  padding-left: 20px;
+  padding-right: 20px;
+  justify-content: space-between;
+
+  @media (min-width: @desktop-width) {
+    position: absolute;
+    width: 570px;
+    height: 201px;
+    z-index: 10;
+    background-color: var(--basic-font-white);
+    bottom: 200px;
+    left: 110px;
+    margin: 0;
+    padding: 0;
+  }
+}
+
+.contact--wrapper {
+  @media (min-width: @tablet-width) {
+    background-color: var(--basic-grey);
+  }
+
+  @media (min-width: @desktop-width) {
+    background-color: var(--basic-font-white);
+  }
+}
+
 .contact__title {
   .main-text(16px; 18px);
   text-transform: uppercase;
   color: var(--basic-light-black);
+  text-align: left;
+
+  @media (min-width: @tablet-width) {
+    .main-text(20px; 21px);
+    width: 171px;
+    margin-left: 41px;
+  }
+
+  @media (min-width: @desktop-width) {
+    .main-text(20px; 21px);
+    /*width: 163px;*/
+    margin-left: 76px;
+    margin-top: 66px;
+  }
 }
 
 .contact__text {
   font-family: "Arial", sans-serif;
   .main-text(14px; 20px);
   color: var(--basic-dark-grey);
+  text-align: left;
+
+  @media (min-width: @tablet-width) {
+    .main-text(16px; 20px);
+    width: 159px;
+    margin-right: 42px;
+    text-align: right;
+  }
+
+  @media (min-width: @desktop-width) {
+    .main-text(16px; 20px);
+    width: 159px;
+    margin-top: 62px;
+    margin-right: 89px;
+    text-align: left;
+  }
 }

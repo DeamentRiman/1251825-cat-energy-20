@@ -1,24 +1,128 @@
 // Начните писать стили здесь
-.additions__title {
-  .main-text(24px; 24px);
-  padding-top: 28px;
-  padding-bottom: 35px;
+.additions {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+
+  @media (min-width: @desktop-width) {
+    margin-bottom: 86px;
+  }
 }
 
-.additions__table {
-  padding-top: 11px;
+.additions__title {
+  margin: 0 20px;
+  .main-text(24px; 24px);
+  margin-top: 8px;
+  padding-bottom: 35px;
+  margin-left: 20px;
+  border-bottom: 1px solid var(--basic-border-light-grey);
+
+  @media (min-width: @tablet-width) {
+    .main-text(36px; 36px);
+    margin: 0 30px;
+    border: none;
+    margin-bottom: 27px;
+  }
+
+  @media (min-width: @desktop-width) {
+    .main-text(36px; 36px);
+    padding: 0;
+    margin: 0 110px;
+    border: none;
+    margin-top: 13px;
+    margin-bottom: 81px;
+  }
+}
+
+.additions__item {
+  display: flex;
+  flex-direction: column;
+  margin: 0 20px;
   padding-bottom: 19px;
+  border-bottom: 1px solid var(--basic-border-light-grey);
+
+  @media (min-width: @tablet-width) {
+    /*padding: 0;*/
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    /*border: none;*/
+    border: 1px solid var(--basic-border-light-grey);
+    padding: 26px 38px 28px 37px;
+    margin: 0 30px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding: 0;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    border: none;
+    border-top: 1px solid var(--basic-border-light-grey);
+    border-bottom: 1px solid var(--basic-border-light-grey);
+    margin: 0 434px 0 110px;
+  }
+}
+
+
+.additions__table {
+  margin-top: 11px;
+  margin-bottom: 12px;
+
+  @media (min-width: @tablet-width) {
+    margin-top: 26px;
+    margin-bottom: 27px;
+  }
+
+  @media (min-width: @desktop-width) {
+    /*margin:0;*/
+    padding: 0;
+    width: 286px;
+    text-align: right;
+    /*margin-top: 15px;
+    margin-bottom: 17px;*/
+  }
 }
 
 .additions__item-title {
-  .main-text(16px; 20px);
+  font-size: 16px;
+  line-height: 20px;
+  font-weight: 400;
+  /*.main-text(16px; 20px);*/
   text-transform: uppercase;
   color: var(--basic-catalog-title);
+  margin-top: 13px;
+
+  @media (min-width: @tablet-width) {
+    font-size: 20px;
+    font-weight: 20px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin: auto 0;
+    padding: 0;
+    font-size: 20px;
+    font-weight: 20px;
+  }
 }
 
 .additions__table-item {
   font-family: "Arial", sans-serif;
   .main-text(14px; 14px);
+  font-weight: 400;
   color: var(--basic-dark-grey);
   text-align: left;
+}
+
+.additions__table-item--wrapper {
+  text-align: right;
+
+  @media (min-width: @tablet-width) {
+    padding-left: 51px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin: 0;
+    padding: 0;
+  }
 }
