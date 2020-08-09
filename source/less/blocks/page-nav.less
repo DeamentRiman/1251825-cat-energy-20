@@ -1,0 +1,72 @@
+// Начните писать стили здесь
+.page-nav__toggle {
+  display: flex;
+  width: 0;
+  height: 0;
+  border: none;
+  margin-right: 20px;
+
+  @media (min-width: @tablet-width) {
+    display: none;
+  }
+
+  @media (min-width: @desktop-width) {
+    display: none;
+  }
+}
+
+.page-nav__toggle::before {
+  content: "";
+  position: absolute;
+  background-image: url("../../img/icon-mobile-menu.svg");
+  background-repeat: no-repeat;
+  background-position-x: right;
+  width: 24px;
+  height: 16px;
+  top: 25px;
+}
+
+.page-nav__list {
+  display: none;
+  width: 440px;
+  margin-left: 95px;
+  /*как обойтись без ширины?*/
+  margin-top: 18px;
+
+  @media (min-width: @tablet-width) {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  @media (min-width: @desktop-width) {
+    display: flex;
+    justify-content: space-between;
+    width: 478px;
+    margin-left: 540px;
+  }
+}
+
+.page-nav__list-item {
+  .main-text(20px; 20px);
+  font-weight: 500;
+  text-transform: uppercase;
+  list-style: none;
+  z-index: 10;
+
+  @media (min-width: @tablet-width) {
+    font-weight: 400;
+    .main-text (18px, 24px);
+  }
+
+  @media (min-width: @desktop-width) {
+    font-weight: 400;
+    .main-text (20px, 30px);
+    /*черный цвет оставлен временно для отладки стилей*/
+    color: var(--basic-font-white);
+  }
+
+  &--wrapper a,
+  &--wrapper {
+    color: var(--basic-black);
+  }
+}

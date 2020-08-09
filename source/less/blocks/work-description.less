@@ -1,17 +1,88 @@
 // Начните писать стили здесь
 .work-description {
-  border: 1px solid purple;
-  margin-top: 27px;
+  padding-bottom: 18px;
+  margin: 0 20px;
+
+  @media (min-width: @tablet-width) {
+    margin: 0 30px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin: 0 110px;
+  }
 }
 
 .work-description__title {
-  .h2-title("Oswald";36px;40px);
+  .main-text(36px; 40px);
   margin-bottom: 38px;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 32px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-bottom: 32px;
+  }
+}
+
+.work-description__list {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+
+  @media (min-width: @tablet-width) {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  @media (min-width: @desktop-width) {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
 }
 
 .work-description__list-item {
-  .main-text("Arial";14px;18px);
+  font-family: "Arial", sans-serif;
+  .main-text(14px; 18px);
   list-style: none;
   color: var(--basic-dark-grey);
   margin-bottom: 24px;
+  margin-left: 80px;
+  position: relative;
+
+  @media (min-width: @tablet-width) {
+    width: 201px;
+    text-align: left;
+    margin-left: 0;
+    margin-top: 183px;
+    margin-right: 152px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 201px;
+    margin-right: 93px;
+  }
+}
+
+.work-description__list-item::before {
+  content: "";
+  position: absolute;
+  width: 60px;
+  height: 60px;
+  background-color: var(--basic-green-button);
+  left: -80px;
+
+  @media (min-width: @tablet-width) {
+    width: 80px;
+    height: 80px;
+    left: 0;
+    bottom: 103px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 80px;
+    height: 80px;
+    left: 0;
+    bottom: 103px;
+  }
 }

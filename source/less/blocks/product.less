@@ -1,29 +1,187 @@
 // Начните писать стили здесь
 .product {
+  margin: 0 20px;
+  display: flex;
+  flex-direction: column;
   border: 1px solid orangered;
+  padding-bottom: 7px;
+
+  @media (min-width: @tablet-width) {
+    margin: 0 30px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin: 0 110px;
+    margin-bottom: 51px;
+    flex-direction: row;
+    justify-content: space-between;
+  }
 }
 
 .product__item {
   background-color: var(--basic-grey);
+  margin: 0;
   margin-bottom: 20px;
+  position: relative;
+
+
+  @media (min-width: @tablet-width) {
+    width: 708px;
+    margin-bottom: 30px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 570px;
+    margin-bottom: 64px;
+  }
+}
+
+.product__item::before {
+  content: "";
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  background-color: var(--basic-green-button);
+  border-radius: 50%;
+  top: 24px;
+  left: 22px;
+
+  @media (min-width: @tablet-width) {
+    width: 200px;
+    height: 200px;
+    left: 446px;
+    top: 81px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 100px;
+    height: 100px;
+    left: 52px;
+    top: 41px;
+  }
+}
+
+.product__item:first-child::after {
+  content: "";
+  position: absolute;
+  width: 36px;
+  height: 50px;
+  background-image: url("../../img/icon-cat-slim.svg");
+  background-repeat: no-repeat;
+  top: 21px;
+  left: 29px;
+
+  @media (min-width: @tablet-width) {
+    width: 140px;
+    height: 192px;
+    left: 476px;
+    top: 81px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 70px;
+    height: 97px;
+    left: 67px;
+    top: 41px;
+  }
+}
+
+.product__item:last-child::after {
+  content: "";
+  position: absolute;
+  width: 67px;
+  height: 50px;
+  background-image: url("../../img/icon-cat-pro.svg");
+  background-repeat: no-repeat;
+  top: 35px;
+  left: 13px;
+
+  @media (min-width: @tablet-width) {
+    width: 268px;
+    height: 112px;
+    left: 411px;
+    top: 135px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 134px;
+    height: 56px;
+    left: 33px;
+    top: 67px;
+  }
 }
 
 .product__item-title {
-  .main-text("Oswald"; 24px; 37px);
-  font-style: normal;
+  font-family: "Oswald", sans-serif;
+  line-height: 37px;
+  font-size: 24px;
   font-weight: 400;
+  /*.main-text(24px; 37px);*/
   text-transform: uppercase;
+  margin: 30px 50px 29px 91px;
+
+  @media (min-width: @tablet-width) {
+    margin: 70px auto 24px 53px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin: 77px 192px 73px 214px;
+  }
 }
 
 .product__item-text {
-  .main-text("Arial"; 14px; 18px);
+  font-family: "Arial", sans-serif;
+  .main-text(14px; 18px);
   color: var(--basic-dark-grey);
+  margin: 0 33px 3px 20px;
+
+  @media (min-width: @tablet-width) {
+    margin: 0 auto 48px 52px;
+    width: 377px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin: 0 51px 23px 52px;
+    width: 467px;
+  }
 }
 
 .product__link {
-  .main-text("Oswald";16px; 16px);
-  text-align: center;
+  .main-text(16px; 16px);
+  display: block;
+  text-align: left;
   text-transform: uppercase;
   text-decoration: none;
   color: var(--basic-black);
+  border-top: 1px solid var(--basic-border-gainsboro);
+  margin-left: 20px;
+  margin-right: 20px;
+  padding-top: 15px;
+  padding-bottom: 18px;
+
+  @media (min-width: @tablet-width) {
+    border: none;
+    margin: 0 auto 53px 52px;
+  }
+
+  @media (min-width: @desktop-width) {
+    border: none;
+    margin: 0 auto 59px 52px;
+  }
+}
+
+.product__link::before {
+  content: "";
+  position: absolute;
+  background-image: url("../../img/icon-right-arrow-long.svg");
+  background-repeat: no-repeat;
+  width: 24px;
+  height: 12px;
+  bottom: 20px;
+  left: 119px;
+
+  @media (min-width: @tablet-width) {
+    left: 185px;
+    bottom: 67px;
+  }
 }

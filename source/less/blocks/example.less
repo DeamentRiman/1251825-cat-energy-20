@@ -1,37 +1,167 @@
 // Начните писать стили здесь
 .example {
+  display: flex;
+  flex-direction: column;
   background-color: var(--basic-grey-whisper);
-  border: 1px solid orangered;
-  margin-top: 42px;
+  position: relative;
+  padding: 0 20px;
+
+  @media (min-width: @tablet-width) {
+    background-color: var(--basic-font-white);
+    border-top: 1px solid var(--basic-whisper);
+    padding: 0 30px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding: 0 110px;
+    border-top: 1px solid var(--basic-whisper);
+  }
 }
 
+.example::before {
+  @media (min-width: @tablet-width) {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 462px;
+    background-color: var(--basic-grey-whisper);
+    bottom: 0;
+    left: 0;
+    z-index: 0;
+  }
+
+  @media (min-width: @desktop-width) {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 462px;
+    background-color: var(--basic-grey-whisper);
+    bottom: 0;
+    left: 0;
+    z-index: 0;
+  }
+}
+
+
 .example__title {
-  .h2-title("Oswald";36px;40px);
+  .main-text(36px; 40px);
   margin-top: 27px;
   margin-bottom: 33px;
+  z-index: 10;
+
+  @media (min-width: @tablet-width) {
+    margin-top: 43px;
+    margin-bottom: 63px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin: 0;
+    margin-bottom: 146px;
+  }
 }
 
 .example__description {
-  .main-text("Arial";14px;18px);
+  font-family: "Arial", sans-serif;
+  .main-text(14px; 18px);
   color: var(--basic-dark-grey);
+  margin-bottom: 25px;
+  z-index: 10;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 54px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 436px;
+    margin-bottom: 69px;
+    margin-right: 730px;
+  }
+}
+
+.example__item {
+  display: flex;
+  justify-content: center;
+  z-index: 10;
+
+  @media (min-width: @tablet-width) {
+    justify-content: left;
+    margin-bottom: 712px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-left: 0;
+    justify-content: left;
+    margin-bottom: 69px;
+  }
+}
+
+.example__item-list {
+  list-style: none;
+  position: relative;
+  width: 124px;
+  text-align: center;
+  border: 1px dashed firebrick;
+
+  @media (min-width: @tablet-width) and (min-width: @desktop-width) {
+    width: 162px;
+    margin-bottom: 55px;
+  }
 }
 
 .example__item-value {
-  .main-text("Oswald";24px;24px);
+  .main-text(24px; 24px);
   text-transform: uppercase;
+  margin: 15px auto 25px auto;
 }
 
 .example__item-comment {
-  .main-text("Arial";12px;12px);
+  font-family: "Arial", sans-serif;
+  .main-text(12px; 12px);
   color: var(--basic-dark-grey);
+  position: absolute;
+  max-width: 77px;
+  text-align: center;
+  top: 40px;
+  left: 25px;
+
+  @media (min-width: @desktop-width) {
+    left: 40px;
+  }
 }
 
 .example__total-price {
-  .main-text("Oswald";14px;20px);
+  .main-text(14px; 20px);
   text-transform: uppercase;
+  margin-top: 25px;
+  text-align: center;
+  z-index: 10;
+
+  @media (min-width: @tablet-width) {
+    position: absolute;
+    top: 250px;
+    left: 563px;
+    width: 140px;
+    text-align: right;
+  }
+
+  @media (min-width: @desktop-width) {
+    position: absolute;
+    top: 453px;
+    left: 110px;
+    width: 327px;
+    text-align: left;
+  }
+}
+
+.example__toggle {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 25px;
+  z-index: 10;
 }
 
 .example__toggle-text {
-  .main-text("Oswald";16px;20px);
+  .main-text(16px; 20px);
   text-transform: uppercase;
+  z-index: 10;
 }

@@ -1,0 +1,19 @@
+// Начните писать стили здесь
+.map {
+  background-image: url("../../img/bg-map-mobile@1x.png");
+  background-repeat: no-repeat;
+  height: 362px;
+
+  @media (min-width: @tablet-width) {
+    background-image: url("../../img/bg-map-tablet@1x.png");
+    background-repeat: no-repeat;
+    height: 400px;
+  }
+
+  @media (min-width: @desktop-width) {
+    background-image: url("../../img/bg-map-desktop@1x.png");
+    background-repeat: no-repeat;
+    height: 400px;
+    z-index: 0;
+  }
+}

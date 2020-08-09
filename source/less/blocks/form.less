@@ -1,49 +1,289 @@
 // Начните писать стили здесь
 .form {
+  display: flex;
+  flex-direction: column;
   margin-top: 37px;
+
+  @media (min-width: @tablet-width) {
+    margin-top: 54px;
+  }
+
+  @media (min-width: @desktop-width) {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
 }
 
-.form-legend {
-  .main-text("Oswald"; 24px; 26px);
-  padding-top: 26px;
-  padding-bottom: 32px;
+.form__fieldset {
+  border: none;
+  padding-bottom: 14px;
+  border-bottom: 1px solid var(--basic-border-gainsboro);
+
+  @media (min-width: @tablet-width) {
+    padding-bottom: 59px;
+    border: none;
+    margin: 0 70px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin: 0 0 0 110px;
+    padding: 0;
+    max-width: 569px;
+  }
 }
 
-.form-legend--wrapper {
-  .main-text("Oswald"; 14px; 18px);
+.form__fieldset--wrapper-first {
+  padding: 0;
+  margin-top: 20px;
+  padding-bottom: 0;
+  /*margin-bottom: 2px;*/
+
+  @media (min-width: @tablet-width) {
+    border: 1px solid var(--basic-border-comment);
+    margin-top: 0;
+    margin-bottom: 71px;
+    padding-top: 25px;
+    padding-bottom: 9px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 568px;
+    height: 200px;
+    margin: 125px 110px 76px 0;
+    box-sizing: border-box;
+  }
+}
+
+.form__fieldset--wrapper-second {
+  padding: 0;
+  /*margin-top: 20px;*/
+  padding-bottom: 0;
+  margin-bottom: 14px;
+  border: none;
+
+  @media (min-width: @tablet-width) {
+    margin: 0 70px 40px 70px;
+    padding: 0;
+  }
+
+  @media (min-width: @desktop-width) {
+    display: flex;
+    max-width: 100%;
+    flex-grow: 1;
+    margin-left: 110px;
+  }
+}
+
+.form__fieldset--wrapper-third {
+  margin: 0;
+  padding: 0;
+  border: none;
+  /*padding-bottom: 34px;*/
+
+  @media (min-width: @tablet-width) {
+    margin: 0 70px 57px 70px;
+  }
+
+  @media (min-width: @desktop-width) {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    flex-grow: 1;
+    max-width: 100%;
+    margin: 0 110px 57px 110px;
+  }
+}
+
+.form__legend {
+  .main-text(24px; 26px);
+  margin: 26px 20px 32px 20px;
+  border: none;
+
+  @media (min-width: @tablet-width) {
+    .main-text(36px; 36px);
+    margin: 0 0 76px 0;
+  }
+}
+
+.form__legend--wrapper {
+  .main-text(14px; 18px);
   text-transform: uppercase;
+
+  @media (min-width: @tablet-width) {
+    /*!добавить  вертикальные оступы!*/
+    .main-text(20px; 30px);
+    margin-bottom: 66px;
+    width: 323px;
+  }
+
+  @media (min-width: @desktop-width) {
+    /*!добавить  вертикальные оступы!*/
+    .main-text(20px; 30px);
+    margin: 56px auto 66px 0;
+    width: 323px;
+  }
 }
 
-.form-item__label {
-  .main-text("Oswald"; 16px; 18px);
+.form__item {
+  padding: 0 20px;
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 13px;
+
+  @media (min-width: @tablet-width) {
+    padding: 0;
+    margin-bottom: 20px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 569px;
+  }
+}
+
+.form__item--wrapper {
+  @media (min-width: @tablet-width) {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  @media (min-width: @desktop-width) {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+
+    .form__item {
+      flex-wrap: nowrap;
+      width: 225px;
+    }
+  }
+}
+
+.form__item-label {
+  .main-text(16px; 18px);
   text-transform: uppercase;
   color: var(--basic-dark-grey);
+  margin: auto 14px auto 0;
+  flex-wrap: nowrap;
+
+  @media (min-width: @tablet-width) {
+    .main-text(20px; 30px);
+    margin: auto 10px auto 0;
+  }
 }
 
-.form-item__input-text {
-  .main-text("Oswald"; 16px; 18px);
+.form__item-input-text {
+  height: 46px;
+  flex-grow: 1;
+  .main-text(16px; 18px);
   text-transform: uppercase;
   color: var(--basic-dark-grey);
+  /*padding: 0 14px;*/
+
+  @media (min-width: @tablet-width) {
+    .main-text(20px; 30px);
+    height: 52px;
+  }
+
+  @media (min-width: @desktop-width) {
+    .main-text(20px; 30px);
+    height: 52px;
+  }
 }
 
-.form-item__input-text--wrapper {
+.form__item-input-text--wrapper {
+  display: block;
   color: var(--basic-black);
+  padding: 13px;
+  margin: 0 20px;
+  margin-bottom: 13px;
+  min-height: 150px;
+  box-sizing: content-box;
+
+  @media (min-width: @tablet-width) {
+    margin: 0;
+    padding: 0;
+    min-height: 174px;
+    min-width: 634px;
+    margin-bottom: 25px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin: 0;
+    padding: 10px 19px;
+    min-height: 174px;
+    min-width: 1220px;
+    margin-bottom: 67px;
+  }
 }
 
-.form-item__label-radio {
-  .main-text("Oswald"; 16px; 18px);
+.form__item-input-text--wrapper-second {
+  padding: 0;
+  margin: 0 20px;
+  height: 30px;
+
+  @media (min-width: @tablet-width) {
+    margin-left: 19px;
+  }
+}
+
+.form__item-input-text--wrapper-second:nth-child(2n) {
+  margin-right: 123px;
+}
+
+.form__item-input-radio {
+  margin-bottom: 13px;
+
+  @media (min-width: @tablet-width) {
+    margin-left: 28px;
+    margin-bottom: 0;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-left: 28px;
+    margin-bottom: 0;
+  }
+}
+
+.form__item-label-radio {
+  .main-text(16px; 18px);
   text-transform: uppercase;
   color: var(--basic-catalog-title);
+  margin-bottom: 13px;
+  margin-left: 15px;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 0;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-bottom: 0;
+  }
 }
 
-.button-wrapper {
-  .main-text("Oswald"; 16px; 20px);
-  color: var(--basic-font-white);
-  width: 280px;
-  height: 40px;
-  border: none;
+.form__comment {
+  font-family: "Arial", sans-serif;
+  .main-text(14px; 16px);
+  margin: 21px 20px 32px 20px;
+  text-align: center;
+
+  @media (min-width: @tablet-width) {
+    /*margin: 0;*/
+    .main-text(16px; 16px);
+    margin: auto 0 auto 61px;
+  }
 }
 
-.form-comment {
-  .main-text("Arial"; 14px; 16px);
+.form__button {
+  display: flex;
+  flex-direction: column;
+
+  @media (min-width: @tablet-width) {
+    margin: 0 133px 72px 70px;
+    flex-direction: row;
+    justify-content: flex-start;
+  }
 }
