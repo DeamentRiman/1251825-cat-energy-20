@@ -1,23 +1,47 @@
 // Начните писать стили здесь
 .catalog {
+  margin: 0;
+  padding: 0;
+  /*
   display: flex;
-  flex-direction: column;
+  flex-direction: column;*/
 
   @media (min-width: @tablet-width) {
     margin: 0 30px;
-    flex-direction: row;
-    flex-wrap: wrap;
+    /*flex-direction: row;
+    flex-wrap: wrap;*/
   }
 
   @media (min-width: @desktop-width) {
     margin: 0 110px;
+    /*flex-direction: row;
+    flex-wrap: wrap;*/
+  }
+}
+
+.catalog--wrapper {
+  display: flex;
+  flex-direction: column;
+  outline: 2px solid seagreen;
+
+  @media (min-width: @tablet-width) {
+  margin: 0 auto;
+  width: @tablet-width--wrapper;
+  flex-direction: row;
+  flex-wrap: wrap;
+  }
+
+  @media (min-width: @desktop-width) {
     flex-direction: row;
     flex-wrap: wrap;
+    width: @desktop-width--wrapper;
+
   }
 }
 
 .catalog__title {
   flex-grow: 1;
+  width: 100%;
   .main-text(36px; 36px);
   padding-top: 27px;
   padding-bottom: 41px;
@@ -29,6 +53,7 @@
     margin-top: 64px;
     margin-bottom: 84px;
     text-align: left;
+    /*width: 226px;*/
   }
 
   @media (min-width: @desktop-width) {
@@ -46,7 +71,7 @@
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  justify-content: flex-start;
+  justify-content: center;
   /*max-width: 280px;*/
   /*margin-bottom: 19px;*/
   padding-top: 11px;
@@ -56,6 +81,10 @@
   /*outline: 1px solid lightcoral;*/
   z-index: 10;
 
+    @media (min-width: @tablet-width) {
+      justify-content: flex-start;
+    }
+
   @media (min-width: @tablet-width) {
     padding: 0;
     flex-direction: column;
@@ -63,7 +92,7 @@
     width: 324px;
     height: 511px;
     outline: 1px solid hotpink;
-    margin-right: 0;
+    margin-right: 60px;
     margin-bottom: 59px;
     border: none;
   }
@@ -83,7 +112,7 @@
 
 .catalog__item:nth-child(2n) {
   @media (min-width: @tablet-width) {
-    margin-right: 60px;
+    margin-right: 0;
   }
 
   @media (min-width: @desktop-width) {
@@ -91,7 +120,7 @@
   }
 }
 
-.catalog__item:nth-child(4n+1) {
+.catalog__item:nth-child(4n) {
   @media (min-width: @desktop-width) {
     margin-right: 0;
   }
@@ -271,11 +300,11 @@
 
   @media (min-width: @tablet-width) {
     .main-text(16px; 18px);
-    margin: 0 75px 87px 76px;
+    margin: 0 75px 107px 76px;
   }
 
   @media (min-width: @desktop-width) {
     .main-text(16px; 18px);
-    margin: 0 39px 87px 39px;
+    margin: 0 39px 107px 39px;
   }
 }

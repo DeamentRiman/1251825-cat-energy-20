@@ -9,34 +9,41 @@
 
   <body class="page__body">
 
-    <header class="page-header container">
-      <a class="logo" href="index.html">
-        <img src="img/logo-mobile.svg" width="191" height="38" class="logo__small" alt="Логотип магазина Кэт энерджи">
-        <!--<img class="logo__title" alt="Логотип магазина Cat Energy">-->
-      </a>
-      <nav class="page-nav">
-        <button class="page-nav__toggle" type="button"><span class="visually-hidden">Открыть меню</span></button>
-        <ul class="page-nav__list">
-          <li class="page-nav__list-item page-nav__list-item--active">Главная</li>
-          <li class="page-nav__list-item"><a href="catalog.html">Каталог продукции</a></li>
-          <li class="page-nav__list-item"><a href="form.html">Подбор программы</a></li>
-        </ul>
-      </nav>
+    <header class="page-header">
+      <div class="container--wrapper">
+        <a class="logo" href="index.html">
+          <img src="img/logo-mobile.svg" width="191" height="38" class="logo__small" alt="Логотип магазина Кэт энерджи">
+          <!--<img class="logo__title" alt="Логотип магазина Cat Energy">-->
+        </a>
+        <nav class="page-nav">
+          <button class="page-nav__toggle" type="button"><span class="visually-hidden">Открыть меню</span></button>
+          <ul class="page-nav__list">
+            <li class="page-nav__list-item page-nav__list-item--active">Главная</li>
+            <li class="page-nav__list-item"><a href="catalog.html">Каталог продукции</a></li>
+            <li class="page-nav__list-item"><a href="form.html">Подбор программы</a></li>
+          </ul>
+        </nav>
+      </div>
     </header>
 
     <main class="page-main">
 
       <section class="promo">
-        <h1 class="promo__title">Функциональное <br> питание для котов</h2>
-        <p class="promo__description">Занялся собой? Займись котом!</p>
-        <!--Фоновое изображение + картинка товара - псевдоэлемент-->
-        <a href="form.html" class="button">Подобрать программу</a>
+          <div class="promo--wrapper">
+            <div class="container--wrapper">
+            <h1 class="promo__title">Функциональное <br> питание для котов</h1>
+            <p class="promo__description">Занялся собой? Займись котом!</p>
+            <!--Фоновое изображение + картинка товара - псевдоэлемент-->
+          </div>
+          </div>
+          <a href="form.html" class="button">Подобрать программу</a>
       </section>
 
       <section class="product">
+        <div class="container--wrapper">
         <div class="product__item">
           <!--картинка - псевдоэлемент кошки-фитоняшки-->
-          <h2 class="product__item-title">Похудение</h3>
+          <h2 class="product__item-title">Похудение</h2>
           <p class="product__item-text">
             Ваш кот весит больше собаки и почти утратил способность лазить по деревьям? Пора на диету! Cat Energy Slim поможет вашему питомцу сбросить лишний вес.
           </p>
@@ -44,36 +51,40 @@
         </div>
         <div class="product__item">
           <!--картинка - псевдоэлемент кошки-атлета-->
-          <h2 class="product__item-title">Набор массы</h3>
+          <h2 class="product__item-title">Набор массы</h2>
             <p class="product__item-text">
               Заработать авторитет среди дворовых котов и даже собак? Серия Cat Energy Pro поможет вашему коту нарастить необходимые мышцы!
             </p>
             <a href="catalog.html" class="product__link">Каталог pro</a>
+        </div>
       </section>
 
       <section class="work-description">
-        <h2 class="work-description__title">Как это работает</h2>
-        <ul class="work-description__list">
-          <li class="work-description__list-item">
-            <!--изображение - псевдоэлемент-->
-              Функциональное питание содержит только полезные питательные вещества.
-          </li>
-          <li class="work-description__list-item">
-            <!--изображение - псевдоэлемент-->
-              Выпускается в виде порошка, который нужно лишь залить кипятком и готово.
-          </li>
-          <li class="work-description__list-item">
-            <!--изображение - псевдоэлемент-->
-              Замените один-два приема обычной еды на наше функциональное питание.
-          </li>
-          <li class="work-description__list-item">
-            <!--изображение - псевдоэлемент-->
-              Уже через месяц наслаждайтесь изменениями к лучшему вашего питомца!
-          </li>
-        </ul>
+        <div class="container--wrapper">
+          <h2 class="work-description__title">Как это работает</h2>
+          <ul class="work-description__list">
+            <li class="work-description__list-item">
+              <!--изображение - псевдоэлемент-->
+                Функциональное питание содержит только полезные питательные вещества.
+            </li>
+            <li class="work-description__list-item">
+              <!--изображение - псевдоэлемент-->
+                Выпускается в виде порошка, который нужно лишь залить кипятком и готово.
+            </li>
+            <li class="work-description__list-item">
+              <!--изображение - псевдоэлемент-->
+                Замените один-два приема обычной еды на наше функциональное питание.
+            </li>
+            <li class="work-description__list-item">
+              <!--изображение - псевдоэлемент-->
+                Уже через месяц наслаждайтесь изменениями к лучшему вашего питомца!
+            </li>
+          </ul>
+        </div>
       </section>
 
       <section class="example">
+        <div class="container--wrapper">
         <h2 class="example__title">Живой пример</h2>
         <p class="example__description">Борис сбросил 5 кг за 2 месяца, просто заменив свой обычный корм на Cat Energy Slim. Отличный результат без изнуряющих тренировок! При этом он не менял своих привычек и по-прежнему спит по 16 часов в день.</p>
         <ul class="example__item">
@@ -101,11 +112,12 @@
             <p class="example__toggle-text">Стало</p>
           </div>
         </div>
+        </div>
       </section>
     </main>
 
     <footer class="page-footer">
-      <section class="contact">
+      <section class="contact container--wrapper">
         <p class="contact__title ">
           Приглашаем к сотрудничеству диллеров!
         </p>
@@ -116,7 +128,7 @@
       <section class="map">
           <!-- место для карты -->
       </section>
-      <section class="link">
+      <section class="link container--wrapper">
         <div class="link__logo">
           <img src="img/logo-footer.svg" width="128" height="24" alt="Логотип Cat Energy">
         </div>

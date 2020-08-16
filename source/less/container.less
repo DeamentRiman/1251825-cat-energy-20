@@ -7,12 +7,26 @@
   @media (min-width: @tablet-width) {
     padding: 0 30px;
     /*margin: 0 auto;*/
-    border: 1px dashed orangered;
   }
 
   @media (min-width: @desktop-width) {
     padding: 0 110px;
     /*margin: 0 auto;*/
-    border: 1px dashed darkcyan;
   }
 }
+
+.container--wrapper {
+  outline: 2px solid black;
+  position: relative;
+  width: @mobile-width--wrapper;
+  margin: 0 auto;
+
+  @media (min-width: @tablet-width) {
+    width: @tablet-width--wrapper;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: @desktop-width--wrapper;
+  }
+}
+

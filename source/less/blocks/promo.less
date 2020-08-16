@@ -1,60 +1,106 @@
 // Начните писать стили здесь
 .promo {
+  position: relative;
   margin: 0;
   padding: 0;
   display: flex;
   flex-direction: column;
-  background-image: url("../../img/index-background-mobile@1x.jpg");
-  background-repeat: no-repeat;
-  background-position-x: center;
-  position: relative;
   margin-bottom: 22px;
-  border: 1px solid aqua;
 
   @media (min-width: @tablet-width) {
-    background-image: none;
+    margin: 0 30px;
+    margin-bottom: 0;
   }
 
   @media (min-width: @desktop-width) {
-    background-image: url("../../img/index-background-desktop@1x.jpg");
-    position: relative;
-    top: -130px;
-    background-position-x: right;
-    width: 100%;
-    height: 696px;
-    z-index: 0;
-    margin-bottom: 0;
-    /*opacity: 0.1;*/
+    margin: 0;
+    /*height: 696px;*/
+
+    .button {
+      margin-top: 396px;
+      margin-left: 190px;
+    }
   }
 }
 
 .promo::before {
   content: "";
   position: absolute;
-  background-image: url("../../img/index-can-mobile@1x.png");
+  background-image: url("../img/index-can-mobile@1x.png");
   background-repeat: no-repeat;
-  width: 280px;
+  background-position-x: center;
+  width: 100%;
   height: 270px;
-  bottom: 40px;
-  left: 20px;
+  top: 160px;
+  z-index: 5;
 
   @media (min-width: @tablet-width) {
-    background-image: url("../../img/index-can-tablet@1x.jpg");
+    background-image: url("../img/index-can-tablet@1x.jpg");
     background-position-x: center;
-    width: 709px;
+    width: 100%;
     height: 609px;
-    left: 30px;
-    bottom: 0;
+    background-position-x: center;
+    top: 263px;
   }
 
   @media (min-width: @desktop-width) {
-    background-image: url("../../img/index-can-desktop@1x.png");
-    width: 552px;
+    background-image: url("../img/index-can-desktop@1x.png");
+    width: 50%;
     height: 499px;
-    left: 558px;
-    top: 141px;
+    left: 32%;
+    top: 0;
   }
 }
+.promo--wrapper::after {
+  @media (min-width: @desktop-width) {
+    content: "";
+    position: absolute;
+    width: 50%;
+    height: 696px;
+    background-color: var(--basic-green-button);
+    top: 0;
+    right: 0;
+    z-index: -20;
+  }
+}
+
+.promo--wrapper {
+  background-image: url("../img/index-background-mobile@1x.jpg");
+  background-color: var(--basic-green-button);
+  width: 100%;
+  height: 270px;
+  background-repeat: no-repeat;
+  background-position-x: center;
+  position: relative;
+  z-index: -1;
+  margin-bottom: 145px;
+
+  @media (min-width: @tablet-width) {
+    background-image: none;
+    background-color: transparent;
+    margin-bottom: 49px;
+  }
+
+  @media (min-width: @desktop-width) {
+    background-image: url("../img/index-background-desktop@1x.jpg");
+    position: absolute;
+    top: -130px;
+    right: 0;
+    background-position-x: right;
+    width: 100%;
+    height: 696px;
+    z-index: 1;
+    margin-bottom: 0;
+  }
+
+  .container--wrapper {
+  @media (min-width: @desktop-width) {
+    position: relative;
+    }
+  }
+}
+
+
 
 .promo__title {
   /*.main-text(30px; 36px);*/
@@ -64,24 +110,24 @@
   font-weight: 400;
   color: var(--basic-font-white);
   text-align: center;
-  margin-top: 27px;
-  margin-bottom: 25px;
+  margin: 27px 20px 25px 20px;
 
   @media (min-width: @tablet-width) {
+    padding: 0;
     font-family: "Oswald", sans-serif;
     font-size: 60px;
     line-height: 60px;
     color: var(--basic-black);
-    margin: 62px 30px 41px 30px;
-    padding-left: 87px;
+    margin: 62px 30px 41px 117px;
     text-align: left;
   }
 
   @media (min-width: @desktop-width) {
+    margin: 0;
+    padding-left: 80px;
+    width: 414px;
     margin-top: 241px;
-    margin-left: 80px;
     margin-bottom: 40px;
-    text-align: left;
   }
 }
 
@@ -90,21 +136,21 @@
   text-transform: uppercase;
   color: var(--basic-font-white);
   text-align: center;
-  margin-bottom: 302px;
+  margin: 0 20px 302px 20px;
 
   @media (min-width: @tablet-width) {
     .main-text(20px; 20px);
     color: var(--basic-black);
-    margin-left: 118px;
+    margin-left: 117px;
+    margin-right: 30px;
     margin-bottom: 49px;
     text-align: left;
   }
 
   @media (min-width: @desktop-width) {
-    .main-text(20px; 20px);
-    color: var(--basic-black);
-    margin-left: 170px;
+    width: 414px;
+    margin: 0;
+    padding-left: 80px;
     margin-bottom: 52px;
-    text-align: left;
   }
 }
