@@ -15,10 +15,10 @@
       </a>
       <nav class="page-nav">
         <button class="page-nav__toggle" type="button"><span class="visually-hidden">Открыть меню</span></button>
-        <ul class="page-nav__list">
-          <li class="page-nav__list-item page-nav__list-item--active"><a href="index.html">Главная</a></li>
-          <li class="page-nav__list-item"><a href="catalog.html">Каталог продукции</a></li>
-          <li class="page-nav__list-item"><a href="form.html">Подбор программы</a></li>
+        <ul class="page-nav__list page-nav__list--active">
+          <li class="page-nav__list-item"><a href="index.html" class="page-nav__list-link">Главная</a></li>
+          <li class="page-nav__list-item"><a href="catalog.html" class="page-nav__list-link">Каталог продукции</a></li>
+          <li class="page-nav__list-item page-nav__list-item--wrapper"><a href="#" class="page-nav__list-link">Подбор программы</a></li>
         </ul>
       </nav>
     </div>
@@ -43,25 +43,26 @@
             <input class="form__item-input-text" type="number" id="form_age" name="age" placeholder="7">
           </div>
         </fieldset>
+
         <fieldset class="form__fieldset form__fieldset--wrapper-first container--wrapper">
           <legend class="form__legend visually-hidden">Цель программы питания</legend>
           <div class="form__item">
             <input class="form__item-input-radio" type="radio" name="form-radio" value="slim" id="form_slim" checked>
-            <label class="form__item-label-radio" for="form_slim" >Похудение</label>
+            <label class="form__item-label-radio" for="form_slim">Похудение</label>
           </div>
           <div class="form__item">
             <input class="form__item-input-radio" type="radio" name="form-radio" value="weight" id="form_weight">
-            <label class="form__item-label-radio" for="form_weight" >Набор массы</label>
+            <label class="form__item-label-radio" for="form_weight">Набор массы</label>
           </div>
           <div class="form__item">
             <input class="form__item-input-radio" type="radio" name="form-radio" value="unknown" id="form_unknown">
-            <label class="form__item-label-radio" for="form_unknown" >Не знаю (нужен ваш совет)</label>
+            <label class="form__item-label-radio" for="form_unknown">Не знаю (нужен ваш совет)</label>
           </div>
         </fieldset>
         </div>
 
 
-        <fieldset class="form__fieldset container--wrapper form__fieldset--wrapper-second ">
+        <fieldset class="form__fieldset container--wrapper form__fieldset--wrapper-second">
           <div class="form__fieldset--wrapper-flex">
             <legend class="form__legend">Контактные данные (владельца кота)</legend>
             <div class="form__item">

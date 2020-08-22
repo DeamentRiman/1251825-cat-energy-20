@@ -1,8 +1,28 @@
 // Начните писать стили здесь
+.page-nav {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  border-bottom: 1px solid var(--basic-whisper);
+
+  @media (min-width: @tablet-width) {
+    flex-direction: row;
+    justify-content: space-between;
+    width: 62%;
+    border-bottom: none;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 39%;
+  }
+}
+
 .page-nav__toggle {
   display: flex;
-  width: 0;
-  height: 0;
+  width: 30%;
+  height: auto;
   border: none;
   margin-right: 20px;
 
@@ -23,50 +43,113 @@
   background-position-x: right;
   width: 24px;
   height: 16px;
-  top: 25%;
+  top: 9%;
+  right: 6.25%;
 }
 
 .page-nav__list {
-  display: none;
-  width: 440px;
+  /*display: none;*/
+  /*width: 440px;
   margin-left: 95px;
   /*как обойтись без ширины?*/
-  margin-top: 18px;
+  /*margin-top: 18px;*/
 
   @media (min-width: @tablet-width) {
     display: flex;
     justify-content: space-between;
+    color: var(--basic-black);
+    width: 100%;
   }
 
   @media (min-width: @desktop-width) {
     display: flex;
     justify-content: space-between;
-    width: 478px;
-    margin-left: 540px;
+    width: 100%;
+    /*margin-left: 540px;*/
+  }
+}
+
+.page-nav__list--active {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+
+  @media (min-width: @tablet-width) {
+    flex-direction: row;
   }
 }
 
 .page-nav__list-item {
   .main-text(20px; 20px);
+  color: var(--basic-black);
   font-weight: 500;
   text-transform: uppercase;
   list-style: none;
   z-index: 10;
+  padding-top: 22px;
+  padding-bottom: 24px;
+  text-align: center;
+  border-top: 1px solid var(--basic-whisper);
 
   @media (min-width: @tablet-width) {
     font-weight: 400;
     .main-text (18px, 24px);
+    padding: 0;
+    border-top: none;
   }
 
   @media (min-width: @desktop-width) {
     font-weight: 400;
     .main-text (20px, 30px);
     /*черный цвет оставлен временно для отладки стилей*/
-    color: var(--basic-font-white);
   }
 
-  &--wrapper a,
-  &--wrapper {
-    color: var(--basic-black);
+  &:hover {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.3;
   }
 }
+.page-nav__list-item--wrapper {
+
+  @media (min-width: @tablet-width) {
+    color: var(--basic-black);
+    padding-bottom: 10px;
+    border-bottom: 2px solid var(--basic-green-button);
+  }
+}
+
+.page-nav__list-link {
+  color: var(--basic-black);
+  padding-bottom: 8px;
+}
+
+.page-nav__list--index  {
+  .page-nav__list-link {
+    @media (min-width: @desktop-width) {
+      color: var(--basic-font-white);
+    }
+  }
+
+  .page-nav__list-link:hover {
+    @media (min-width: @desktop-width) {
+      opacity: 0.6;
+    }
+  }
+
+  .page-nav__list-link:active {
+    @media (min-width: @desktop-width) {
+      opacity: 0.3;
+    }
+  }
+
+  .page-nav__list-item--wrapper {
+    @media (min-width: @desktop-width) {
+      padding-bottom: 10px;
+      border-bottom: 2px solid var(--basic-font-white);
+    }
+  }
+}
+

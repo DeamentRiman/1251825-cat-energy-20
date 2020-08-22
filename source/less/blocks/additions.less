@@ -59,9 +59,15 @@
     flex-wrap: nowrap;
     border: none;
     border-top: 1px solid var(--basic-border-light-grey);
-    border-bottom: 1px solid var(--basic-border-light-grey);
+    /*border-bottom: 1px solid var(--basic-border-light-grey);*/
     margin: 0 434px 0 0;
   }
+}
+.additions__item:last-child {
+  @media (min-width: @desktop-width) {
+    border-bottom: 1px solid var(--basic-border-light-grey);
+  }
+
 }
 
 .additions__item-title {

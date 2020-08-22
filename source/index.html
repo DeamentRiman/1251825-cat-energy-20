@@ -13,15 +13,14 @@
       <div class="container--wrapper">
         <a class="logo" href="index.html">
           <img src="img/logo-mobile.svg" width="191" height="38" class="logo__small" alt="Логотип магазина Кэт энерджи">
-          <!--<img class="logo__title" alt="Логотип магазина Cat Energy">-->
         </a>
         <nav class="page-nav">
           <button class="page-nav__toggle" type="button"><span class="visually-hidden">Открыть меню</span></button>
-          <ul class="page-nav__list">
-            <li class="page-nav__list-item page-nav__list-item--active">Главная</li>
-            <li class="page-nav__list-item"><a href="catalog.html">Каталог продукции</a></li>
-            <li class="page-nav__list-item"><a href="form.html">Подбор программы</a></li>
-          </ul>
+          <ul class="page-nav__list page-nav__list--active page-nav__list--index">
+            <li class="page-nav__list-item page-nav__list-item--wrapper"><a href="#" class="page-nav__list-link">Главная</a></li>
+            <li class="page-nav__list-item"><a href="catalog.html" class="page-nav__list-link">Каталог продукции</a></li>
+            <li class="page-nav__list-item"><a href="form.html" class="page-nav__list-link">Подбор программы</a></li>
+            </ul>
         </nav>
       </div>
     </header>
@@ -31,18 +30,18 @@
       <section class="promo">
           <div class="promo--wrapper">
             <div class="container--wrapper">
-            <h1 class="promo__title">Функциональное <br> питание для котов</h1>
-            <p class="promo__description">Занялся собой? Займись котом!</p>
-            <!--Фоновое изображение + картинка товара - псевдоэлемент-->
+              <h1 class="promo__title">Функциональное <br> питание для котов</h1>
+              <p class="promo__description">Занялся собой? Займись котом!</p>
+            </div>
           </div>
+          <div class="promo-button container--wrapper">
+            <a href="form.html" class="button">Подобрать программу</a>
           </div>
-          <a href="form.html" class="button">Подобрать программу</a>
       </section>
 
       <section class="product">
         <div class="container--wrapper">
         <div class="product__item">
-          <!--картинка - псевдоэлемент кошки-фитоняшки-->
           <h2 class="product__item-title">Похудение</h2>
           <p class="product__item-text">
             Ваш кот весит больше собаки и почти утратил способность лазить по деревьям? Пора на диету! Cat Energy Slim поможет вашему питомцу сбросить лишний вес.
@@ -50,7 +49,6 @@
           <a href="catalog.html" class="product__link">Каталог slim</a>
         </div>
         <div class="product__item">
-          <!--картинка - псевдоэлемент кошки-атлета-->
           <h2 class="product__item-title">Набор массы</h2>
             <p class="product__item-text">
               Заработать авторитет среди дворовых котов и даже собак? Серия Cat Energy Pro поможет вашему коту нарастить необходимые мышцы!

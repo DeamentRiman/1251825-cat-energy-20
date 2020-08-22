@@ -192,3 +192,18 @@
     left: 185px;
   }
 }
+
+.product__link:hover::before {
+    content: "";
+    position: absolute;
+    background-image: url("../img/icon-right-arrow-verylong.svg");
+    background-repeat: no-repeat;
+    width: 32px;
+    height: 10px;
+    bottom: 42%;
+    left: 189px;
+}
+
+.product__link:focus {
+  opacity: 0.3;
+}
