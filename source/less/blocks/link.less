@@ -1,7 +1,6 @@
 // Начните писать стили здесь
 .link {
   display: flex;
-  flex-direction: column;
   background-color: var(--basic-grey);
   border: 1px solid orangered;
   /*padding-top: 39px;*/
@@ -13,11 +12,21 @@
     align-items: center;
     border: none;
   }
+
+  .container--wrapper{
+    display: flex;
+    flex-direction: column;
+
+    @media (min-width: @tablet-width) {
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+    }
+  }
 }
 
 .link__logo {
   text-align: center;
-  margin: 0 20px;
   padding-top: 39px;
   padding-bottom: 32px;
   border-bottom: 1px solid var(--basic-border-gainsboro);
@@ -30,7 +39,6 @@
 .link__social {
   display: flex;
   justify-content: space-between;
-  padding: 0 20px;
   padding-top: 27px;
   padding-bottom: 21px;
   border-bottom: 1px solid var(--basic-border-gainsboro);
@@ -46,7 +54,6 @@
 
 .link__academy {
   display: flex;
-  padding: 0 20px;
   justify-content: space-between;
   padding-top: 22px;
   padding-bottom: 22px;
