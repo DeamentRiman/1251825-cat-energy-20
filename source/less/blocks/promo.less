@@ -14,11 +14,12 @@
 
   @media (min-width: @desktop-width) {
     margin: 0;
-    /*height: 696px;*/
+    margin-bottom: 82px;
+    height: 566px;
 
     .button {
       margin-left: 80px;
-      margin-top: 396px;
+      /*margin-top: 396px;
       margin-bottom: 267px;
       /*margin-left: 190px;*/
     }
@@ -34,6 +35,7 @@
   width: 100%;
   height: 270px;
   top: 160px;
+  z-index: 2;
 
   @media (min-width: @tablet-width) {
     background-image: url("../img/index-can-tablet@1x.jpg");
@@ -50,9 +52,10 @@
     height: 499px;
     left: 32%;
     top: 0;
+    z-index: 4;
   }
 }
-
+/*
 .promo--wrapper::after {
   @media (min-width: @desktop-width) {
     content: "";
@@ -63,18 +66,31 @@
     top: 0;
     right: 0;
     z-index: -20;
+  }*/
+
+
+.promo--wrapper {
+  @media (min-width: @desktop-width) {
+    position: relative;
+    top: -130px;
+    right: 0;
+    background-image: url("../img/index-background-desktop@1x.jpg");
+    background-position-x: right;
+    background-repeat: no-repeat;
+    z-index: 2;
+    height: 696px;
   }
 }
 
-.promo--wrapper {
+.promo--wrapper::before {
+  content: "";
+  position: absolute;
   background-image: url("../img/index-background-mobile@1x.jpg");
   background-color: var(--basic-green-button);
   width: 100%;
   height: 270px;
   background-repeat: no-repeat;
   background-position-x: center;
-  position: relative;
-  z-index: -1;
   margin-bottom: 145px;
 
   @media (min-width: @tablet-width) {
@@ -84,23 +100,22 @@
   }
 
   @media (min-width: @desktop-width) {
-    background-image: url("../img/index-background-desktop@1x.jpg");
+    content: "";
     position: absolute;
-    top: -130px;
+    background-color: var(--basic-green-button);
+    top: 0;
     right: 0;
     background-position-x: right;
-    width: 100%;
+    width: 50%;
     height: 696px;
     z-index: 1;
     margin-bottom: 0;
-
-    /*background-size: contain;*/
   }
+}
 
-  .container--wrapper {
-    @media (min-width: @desktop-width) {
-      position: relative;
-    }
+.container--wrapper {
+  @media (min-width: @desktop-width) {
+    position: relative;
   }
 }
 

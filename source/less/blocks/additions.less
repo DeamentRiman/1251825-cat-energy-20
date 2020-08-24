@@ -7,6 +7,23 @@
 
   @media (min-width: @desktop-width) {
     margin-bottom: 86px;
+
+    .container--wrapper {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      flex-wrap: wrap;
+    }
+  }
+}
+
+.addition--wrapper {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+
+  @media (min-width: @desktop-width) {
+    width: 73%;
   }
 }
 
@@ -60,14 +77,14 @@
     border: none;
     border-top: 1px solid var(--basic-border-light-grey);
     /*border-bottom: 1px solid var(--basic-border-light-grey);*/
-    margin: 0 434px 0 0;
+    margin: 0;
   }
 }
+
 .additions__item:last-child {
   @media (min-width: @desktop-width) {
     border-bottom: 1px solid var(--basic-border-light-grey);
   }
-
 }
 
 .additions__item-title {
@@ -136,5 +153,80 @@
     margin: 0;
     padding: 0;
     width: 15%;
+  }
+}
+
+// Начните писать стили здесь
+.additional_surprise {
+  display: block;
+  max-width: 320px;
+  height: 289px;
+  background-image: url("../img/gift-photo-mobile@1x.jpg");
+  background-repeat: no-repeat;
+  margin: 39px auto 35px auto;
+  position: relative;
+  z-index: -1;
+
+  @media (min-width: @tablet-width) {
+    padding: 0;
+    max-width: 708px;
+    height: 200px;
+    /*background-image: none;*/
+    background-image: url("../img/gift-photo-tablet@1x.jpg");
+    background-repeat: no-repeat;
+    margin: 69px auto 76px auto;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding: 0;
+    margin: 0;
+    width: 245px;
+    height: 289px;
+    background-image: url("../img/gift-photo-desktop@1x.jpg");
+    background-repeat: no-repeat;
+    /*padding: 69px 110px 76px 110px;*/
+  }
+}
+
+.additional_surprise::before {
+  content: "";
+  position: absolute;
+  background-image: url("../img/icon-gift.svg");
+  background-repeat: no-repeat;
+  width: 78px;
+  height: 80px;
+  top: 58px;
+  left: 101px;
+  z-index: 3;
+  fill: var(--basic-font-white);
+
+  @media (min-width: @tablet-width) {
+    top: 57px;
+    left: 78px;
+  }
+
+  @media (min-width: @desktop-width) {
+    top: 56px;
+    left: 84px;
+  }
+}
+
+.additional_surprise__text {
+  margin: 0;
+  padding: 0;
+  font-family: "Arial", sans-serif;
+  .main-text(16px; 20px);
+  color: var(--basic-font-white);
+  padding-top: 186px;
+  text-align: center;
+
+  @media (min-width: @tablet-width) {
+    padding: 71px 124px 69px 423px;
+    text-align: left;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding: 184px 43px 42px 41px;
+    text-align: center;
   }
 }

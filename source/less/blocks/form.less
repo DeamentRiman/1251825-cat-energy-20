@@ -348,13 +348,13 @@
 
 .form__item-input-checkbox + label::before {
   content: "";
-    position: absolute;
-    width: 30px;
-    height: 30px;
-    top: -6px;
-    left: 0;
-    border: 1px solid var(--basic-border-light-grey);
-    border-radius: 0;
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  top: -6px;
+  left: 0;
+  border: 1px solid var(--basic-border-light-grey);
+  border-radius: 0;
 
   @media (min-width: @tablet-width) {
     content: "";
@@ -370,13 +370,13 @@
 
 .form__item-input-checkbox:checked + label::after {
   content: "";
-    position: absolute;
-    background-image: url("../../img/icon-tick.svg");
-    background-repeat: no-repeat;
-    width: 26px;
-    height: 26px;
-    top: 2px;
-    left: 4px;
+  position: absolute;
+  background-image: url("../../img/icon-tick.svg");
+  background-repeat: no-repeat;
+  width: 26px;
+  height: 26px;
+  top: 2px;
+  left: 4px;
 
   @media (min-width: @tablet-width) {
     content: "";
@@ -407,13 +407,13 @@
 
 .form__item-input-radio + label::before {
   content: "";
-    border: 1px solid var(--basic-border-light-grey);
-    border-radius: 50%;
-    width: 30px;
-    height: 30px;
-    position: absolute;
-    top: -5px;
-    left: 0;
+  border: 1px solid var(--basic-border-light-grey);
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  top: -5px;
+  left: 0;
 
   @media (min-width: @tablet-width) {
     content: "";
@@ -428,14 +428,14 @@
 }
 
 .form__item-input-radio:checked + label::after {
-    content: "";
-    background-color: var(--basic-green-button);
-    border-radius: 50%;
-    width: 13.5px;
-    height: 13.5px;
-    position: absolute;
-    top: 4px;
-    left: 9px;
+  content: "";
+  background-color: var(--basic-green-button);
+  border-radius: 50%;
+  width: 13.5px;
+  height: 13.5px;
+  position: absolute;
+  top: 4px;
+  left: 9px;
 
   @media (min-width: @tablet-width) {
     content: "";
@@ -462,12 +462,12 @@
     margin-left: 88px;
     width: 86%;
   }
+}
 /*
   @media (min-width: @desktop-width) {
     margin-bottom: 0;
     margin-left: 88px;
   }*/
-}
 
 .form__comment {
   font-family: "Arial", sans-serif;
@@ -519,16 +519,15 @@
       width: 100%;
     }
   }
-
-  .form__item-label {
-    @media (min-width: @tablet-width) {
-      margin: 0 40px 20px 40px;
-    }
-
-    @media (min-width: @desktop-width) {
-      padding: 0;
-      margin: auto 20px auto 0;
-    }
-  }
 }
+/*
+.form__item-label {
+  @media (min-width: @tablet-width) {
+    margin: 0 40px 20px 40px;
+  }
 
+  @media (min-width: @desktop-width) {
+    padding: 0;
+    margin: auto 20px auto 0;
+  }
+}*/
