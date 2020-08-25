@@ -1,22 +1,48 @@
 // Начните писать стили здесь
 .page-header {
-  margin: 0;
-  display: flex;
+  /*padding: 0 20px;
+  /*display: flex;
   flex-direction: row;
-  justify-content: space-between;
-  padding-top: 11px;
-  padding-bottom: 17px;
-  border-bottom: 1px solid var(--basic-border-gainsboro);
+  /*justify-content: space-between;*/
 
   @media (min-width: @tablet-width) {
+    display: flex;
+    flex-direction: row;
+    padding: 0;
+    margin: 0 30px;
     padding-top: 24px;
     /*убрать знаки, заккоментировано для проверки*/
     /*border: none;*/
   }
 
   @media (min-width: @desktop-width) {
+    margin: 0 110px;
     padding-top: 53px;
     /*убрать знаки, заккоментировано для проверки*/
     border: none;
+    z-index: 5;
+  }
+
+  .container--wrapper {
+    /*margin: 0 auto;*/
+    /*margin: 0;*/
+    width: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-top: 11px;
+    /*padding-bottom: 17px;*/
+    /*width: 100%;*/
+
+    @media (min-width: @tablet-width) {
+      width: @tablet-width--wrapper;
+      margin: 0 auto;
+      flex-direction: row;
+      justify-content: space-between;
+    }
+
+    @media (min-width: @desktop-width) {
+      width: @desktop-width--wrapper;
+    }
   }
 }
