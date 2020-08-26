@@ -1,7 +1,7 @@
 # Личный проект «Кэт энерджи» [![Build status][travis-image]][travis-url] [![Dependency status][dependency-image]][dependency-url]
 
 * Студент: [Svetlana Valdaeva](https://up.htmlacademy.ru/adaptive/20/user/1251825).
-* Наставник: [Антон Попов] (https://htmlacademy.ru/profile/joker)
+* Наставник: [Анна Рус](https://htmlacademy.ru/profile/vanillawulf)
 
 ---
 

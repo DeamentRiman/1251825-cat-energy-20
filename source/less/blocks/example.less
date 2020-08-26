@@ -164,4 +164,18 @@
   .main-text(16px; 20px);
   text-transform: uppercase;
   z-index: 10;
+  padding: 0;
+}
+
+.example__toggle-text--wrapper {
+  padding: 0;
+  border-bottom: 1px dotted var(--basic-border-light-grey);
+
+  &:hover {
+    border-bottom: 1px solid var(--basic-border-light-grey);
+  }
+
+  &:active {
+    border-bottom: none;
+  }
 }

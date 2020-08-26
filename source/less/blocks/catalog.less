@@ -176,7 +176,7 @@
   }
 }
 
-.catalog__item-text:last-child {
+.catalog__plus + .catalog__item-text::before {
   @media (min-width: @tablet-width) {
     content: "";
     position: absolute;
@@ -186,7 +186,19 @@
     border: 2px solid var(--basic-grey);
     width: 100%;
     height: 431px;
-    z-index: -1;
+    z-index: 1;
+  }
+
+  @media (min-width: @desktop-width) {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background-color: var(--basic-font-white);
+    border: 2px solid var(--basic-grey);
+    width: 100%;
+    height: 431px;
+    z-index: 1;
   }
 }
 

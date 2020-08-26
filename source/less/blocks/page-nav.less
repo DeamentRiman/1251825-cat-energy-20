@@ -5,6 +5,7 @@
   flex-direction: column;
   align-items: center;
   width: 100%;
+  /*min-height: 66px;*/
   border-bottom: 1px solid var(--basic-whisper);
 
   @media (min-width: @tablet-width) {
@@ -25,7 +26,9 @@
   width: 30%;
   height: auto;
   border: none;
-  margin-right: 20px;
+  margin-left: 0;
+  /*margin-right: 20px;
+  /*cursor: pointer;*/
 
   @media (min-width: @tablet-width) {
     display: none;
@@ -36,19 +39,59 @@
   }
 }
 
-.page-nav__toggle::before {
+.page-nav--close .page-nav__list {
+  display: none;
+
+  @media (min-width: @tablet-width) {
+    display: flex;
+  }
+
+  @media (min-width: @desktop-width) {
+    display: flex;
+  }
+
+}
+
+.page-nav--close .page-nav__toggle::before {
+  /*гамбургер для закрытого меню*/
   content: "";
   position: absolute;
-  background-image: url("../img/icon-mobile-menu.svg");
+  background-image: url("../../img/icon-mobile-menu.svg");
   background-repeat: no-repeat;
   background-position-x: right;
   width: 24px;
   height: 16px;
-  top: 9%;
+  top: 35%;
   right: 6.25%;
 }
 
+.page-nav--active .page-nav__toggle {
+  content: "";
+  position: absolute;
+  background-image: url("../img/icon-close.svg");
+  background-repeat: no-repeat;
+  background-position-x: right;
+  background-color: transparent;
+  width: 18px;
+  height: 18px;
+  top: 9%;
+  right: 6.25%;
+
+  @media (min-width: @tablet-width) {
+    display: none;
+  }
+
+  @media (min-width: @desktop-width) {
+    display: none;
+  }
+}
+
+.page-nav--js .page-nav__toggle {
+  display: none;
+}
+
 .page-nav__list {
+  width: 100%;
   /*display: none;*/
   /*width: 440px;
   margin-left: 95px;
@@ -71,6 +114,7 @@
 }
 
 .page-nav__list--active {
+  /*стиль для JS*/
   display: flex;
   flex-direction: column;
   width: 100%;
@@ -115,9 +159,13 @@
 }
 
 .page-nav__list-item--wrapper {
+
   @media (min-width: @tablet-width) {
     color: var(--basic-black);
     padding-bottom: 10px;
+    border-bottom: 2px solid var(--basic-green-button);
+  }
+  .page-nav__list-link {
     border-bottom: 2px solid var(--basic-green-button);
   }
 }

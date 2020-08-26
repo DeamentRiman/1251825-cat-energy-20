@@ -14,9 +14,9 @@
         <a class="logo" href="index.html">
           <img src="img/logo-mobile.svg" width="191" height="38" class="logo__small" alt="Логотип магазина Кэт энерджи">
         </a>
-        <nav class="page-nav">
+        <nav class="page-nav page-nav--active">
           <button class="page-nav__toggle" type="button"><span class="visually-hidden">Открыть меню</span></button>
-          <ul class="page-nav__list page-nav__list--active page-nav__list--index">
+          <ul class="page-nav__list page-nav__list--index">
             <li class="page-nav__list-item page-nav__list-item--wrapper"><a href="#" class="page-nav__list-link">Главная</a></li>
             <li class="page-nav__list-item"><a href="catalog.html" class="page-nav__list-link">Каталог продукции</a></li>
             <li class="page-nav__list-item"><a href="form.html" class="page-nav__list-link">Подбор программы</a></li>
@@ -107,8 +107,11 @@
             </li>
           </ul>
           <div class="example__toggle slider__toggle">
-            <p class="example__toggle-text">Было</p>
-            <p class="example__toggle-text">Стало</p>
+            <p class="example__toggle-text example__toggle-text--wrapper">Было</p>
+            <div class="example__toggle-button">
+              <button class="example__toggle-button-inside"></button>
+            </div>
+            <p class="example__toggle-text example__toggle-text--wrapper">Стало</p>
           </div>
         </div>
         </div>
@@ -152,6 +155,6 @@
         </div>
       </section>
     </footer>
-
+    <script src="js/nav-open.js"></script>
   </body>
 </html>
