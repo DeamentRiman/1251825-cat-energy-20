@@ -15,12 +15,12 @@
   /*cursor: pointer;*/
 
   @media (min-width: @tablet-width) {
-    margin-left: 112px;
+    margin-left: 82px;
     margin-bottom: 526px;
     .main-text(20px; 20px);
     color: var(--basic-font-white);
     z-index: 10;
-    padding: 14px 26px;
+    padding: 18px 26px;
   }
 
   @media (min-width: @desktop-width) {
@@ -29,7 +29,7 @@
     .main-text(20px; 20px);
     color: var(--basic-font-white);
     z-index: 5;
-    padding: 14px 26px;
+    padding: 18px 26px;
   }
 }
 
@@ -51,8 +51,9 @@
 
   @media (min-width: @tablet-width) {
     margin: 0;
-    margin-left: 39px;
+    margin-left: 40px;
     z-index: 15;
+    padding: 10px 28px;
     /*margin-bottom: 40px;*/
   }
 
@@ -60,7 +61,7 @@
     margin: 0;
     margin-left: 39px;
     z-index: 15;
-    padding: 10px 0;
+    padding: 11px 0;
     width: 168px;
     /*margin-bottom: 40px;*/
   }
@@ -79,10 +80,10 @@
   color: var(--basic-dark-grey);
 
   @media (min-width: @tablet-width) {
-    /*padding: 0;
-    margin: 0;*/
+    /*padding: 0;*/
+    margin: 0;
     margin-bottom: 21px;
-    padding: 14px 40px;
+    padding: 10px 40px;
     width: 169px;
   }
 
@@ -104,10 +105,14 @@
 }
 
 .button--catalog-additions {
+  letter-spacing: 1px;
+
   @media (min-width: @tablet-width) {
     margin: 0;
-    padding: 14px 0;
+    padding: 10px 0;
     width: 632px;
+    font-size: 16px;
+    letter-spacing: 0;
   }
 
   @media (min-width: @desktop-width) {
@@ -131,10 +136,14 @@
     height: 52px;
     margin: 0;
     font-size: 20px;
+    margin-left: 41px;
+    margin-right: 62px;
   }
 
   @media (min-width: @desktop-width) {
     width: 568px;
+    margin: 0;
+    margin-top: 5px;
   }
 }
 
@@ -143,6 +152,7 @@
   width: 84px;
   height: 14px;
   border-radius: 6px;
+  margin: 0 16px;
   border: 1px solid var(--basic-border-light-grey);
   background-color: var(--basic-font-white);
   z-index: 3;
@@ -164,7 +174,6 @@
   }
 }
 
-
 .example__toggle-button-inside {
   position: relative;
   top: -5px;
@@ -181,6 +190,14 @@
     height: 8px;
     top: 6px;
     left: 13px;
+    border-radius: 50%;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 8px;
+    height: 8px;
+    top: 4px;
+    left: 15px;
     border-radius: 50%;
   }
 }

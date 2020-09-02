@@ -4,8 +4,9 @@
 
     navMain.classList.remove('page-nav--js');
 
-    navToggle.addEventListener("click", function() {
-      if (navMain.classList.contains("page-nav--js")) {
+    navToggle.addEventListener("click", function(evt) {
+      evt.preventDefault();
+      if (navMain.classList.contains("page-nav--close")) {
         navMain.classList.remove("page-nav--close");
         navMain.classList.add("page-nav--active");
         navList.classList.add("page-nav__list--active");

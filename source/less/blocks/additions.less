@@ -23,23 +23,25 @@
   width: 100%;
 
   @media (min-width: @desktop-width) {
-    width: 73%;
+    width: 73.5%;
   }
 }
 
 .additions__title {
   .main-text(24px; 24px);
-  margin-top: 8px;
-  padding-bottom: 35px;
+  margin-top: 29px;
+  padding-bottom: 34px;
   /*margin-left: 20px;*/
   border-bottom: 1px solid var(--basic-border-light-grey);
+  font-weight: 400;
 
   @media (min-width: @tablet-width) {
+    margin-top: 9px;
     .main-text(36px; 36px);
     /*margin: 0 30px;*/
     border: none;
     margin-left: 37px;
-    margin-bottom: 27px;
+    margin-bottom: 47px;
   }
 
   @media (min-width: @desktop-width) {
@@ -56,7 +58,7 @@
 .additions__item {
   display: flex;
   flex-direction: column;
-  padding-bottom: 19px;
+  padding-bottom: 18px;
   border-bottom: 1px solid var(--basic-border-light-grey);
 
   @media (min-width: @tablet-width) {
@@ -66,7 +68,7 @@
     justify-content: space-between;
     /*border: none;*/
     border: 1px solid var(--basic-border-light-grey);
-    padding: 26px 38px 28px 37px;
+    padding: 13px 32px 28px 38px;
     /*margin: 0 30px;*/
   }
 
@@ -94,7 +96,7 @@
   /*.main-text(16px; 20px);*/
   text-transform: uppercase;
   color: var(--basic-catalog-title);
-  margin-top: 13px;
+  margin-top: 11px;
 
   @media (min-width: @tablet-width) {
     font-size: 20px;
@@ -102,29 +104,29 @@
   }
 
   @media (min-width: @desktop-width) {
-    margin: auto auto auto 0;
+    margin: 26px auto 25px 0;
     padding: 0;
     /*font-weight: 20px;*/
   }
 }
 
 .additions__table {
-  margin-top: 11px;
+  margin-top: 9px;
   margin-bottom: 12px;
 
-
   @media (min-width: @tablet-width) {
-    margin-top: 26px;
-    margin-bottom: 27px;
+    margin-top: 13px;
+    margin-bottom: 21px;
+    width: 288px;
     /*width: 226px;*/
   }
 
   @media (min-width: @desktop-width) {
     /*margin:0;*/
-    margin-right: 40px;
+    margin: auto 0;
+    margin-right: 35px;
     padding: 0;
-    width: 286px;
-    text-align: right;
+    width: 294px;
     /*margin-top: 15px;
     margin-bottom: 17px;*/
   }
@@ -137,8 +139,15 @@
   color: var(--basic-dark-grey);
   text-align: left;
 
+  @media (min-width: @tablet-width) {
+    .main-text(16px; 20px);
+    width: 67%;
+    text-align: right;
+  }
+
   @media (min-width: @desktop-width) {
-    width: 85%;
+    width: 77%;
+    text-align: left;
   }
 }
 
@@ -146,13 +155,14 @@
   text-align: right;
 
   @media (min-width: @tablet-width) {
-    padding-left: 51px;
+    padding-left: 0;
   }
 
   @media (min-width: @desktop-width) {
     margin: 0;
     padding: 0;
     width: 15%;
+    text-align: left;
   }
 }
 
@@ -192,20 +202,20 @@
   position: absolute;
   background-image: url("../img/icon-gift.svg");
   background-repeat: no-repeat;
-  width: 78px;
-  height: 80px;
-  top: 58px;
-  left: 101px;
+  width: 66px;
+  height: 61px;
+  top: 64px;
+  left: 112px;
   z-index: 2;
 
   @media (min-width: @tablet-width) {
-    top: 57px;
-    left: 78px;
+    top: 63px;
+    left: 91px;
   }
 
   @media (min-width: @desktop-width) {
-    top: 56px;
-    left: 84px;
+    top: 62.5px;
+    left: 96px;
   }
 }
 

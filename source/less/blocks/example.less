@@ -14,7 +14,7 @@
 
   @media (min-width: @desktop-width) {
     padding: 0 110px;
-    border-top: 1px solid var(--basic-whisper);
+    border: none;
   }
 }
 
@@ -34,22 +34,23 @@
     content: "";
     position: absolute;
     width: 100%;
-    height: 462px;
+    height: 487px;
     background-color: var(--basic-grey-whisper);
-    bottom: 0;
+    top: 136px;
     left: 0;
     z-index: 0;
   }
 }
 
-
 .example__title {
   .main-text(36px; 40px);
   margin-top: 27px;
-  margin-bottom: 33px;
+  margin-bottom: 35px;
   z-index: 10;
+  font-weight: 400;
 
   @media (min-width: @tablet-width) {
+    .main-text(60px; 60px);
     margin-top: 43px;
     margin-bottom: 63px;
   }
@@ -65,16 +66,19 @@
   .main-text(14px; 18px);
   color: var(--basic-dark-grey);
   margin-bottom: 25px;
+  padding-right: 1px;
   z-index: 10;
 
   @media (min-width: @tablet-width) {
-    margin-bottom: 54px;
+    margin-bottom: 52px;
+    .main-text(16px; 24px);
+    padding-right: 10px;
   }
 
   @media (min-width: @desktop-width) {
     width: 436px;
     margin-bottom: 69px;
-    margin-right: 730px;
+    margin-right: 292px;
   }
 }
 
@@ -85,25 +89,26 @@
 
   @media (min-width: @tablet-width) {
     justify-content: left;
-    margin-bottom: 712px;
+    margin-bottom: 327px;
   }
 
   @media (min-width: @desktop-width) {
     margin-left: 0;
     justify-content: left;
-    margin-bottom: 69px;
+    margin-bottom: 101px;
   }
 }
 
 .example__item-list {
   list-style: none;
   position: relative;
-  width: 124px;
+  width: 122px;
   text-align: center;
   border: 1px dashed firebrick;
 
-  @media (min-width: @tablet-width) and (min-width: @desktop-width) {
+  @media (min-width: @tablet-width) {
     width: 162px;
+    margin-right: 40px;
     margin-bottom: 55px;
   }
 }
@@ -111,7 +116,12 @@
 .example__item-value {
   .main-text(24px; 24px);
   text-transform: uppercase;
-  margin: 15px auto 25px auto;
+  margin: 15px auto 15px auto;
+
+  @media (min-width: @tablet-width) {
+    margin: 16px auto 16px auto;
+    .main-text(30px; 37px);
+  }
 }
 
 .example__item-comment {
@@ -121,43 +131,80 @@
   position: absolute;
   max-width: 77px;
   text-align: center;
-  top: 40px;
-  left: 25px;
+  top: 46px;
+  left: 22px;
 
-  @media (min-width: @desktop-width) {
-    left: 40px;
+  @media (min-width: @tablet-width) {
+    /*left: 40px;*/
+    .main-text(14px; 14px);
+    max-width: 143px;
+    top: 63px;
+    left: 22px;
   }
 }
 
 .example__total-price {
   .main-text(14px; 20px);
   text-transform: uppercase;
-  margin-top: 25px;
+  margin-top: 34px;
   text-align: center;
   z-index: 10;
 
   @media (min-width: @tablet-width) {
     position: absolute;
-    top: 250px;
-    left: 563px;
-    width: 140px;
+    top: 266px;
+    right: 0;
+    width: 174px;
     text-align: right;
+    .main-text(20px; 28px);
   }
 
   @media (min-width: @desktop-width) {
     position: absolute;
-    top: 453px;
-    left: 110px;
-    width: 327px;
+    top: 465px;
+    left: 0;
+    width: 327px; /*проверить*/
     text-align: left;
+  }
+}
+
+.example__total-price--wrapper {
+  @media (min-width: @desktop-width) {
+    position: absolute;
+    top: 4px;
+    left: 239px;
+    width: 90px;
+    height: 20px;
+    .main-text(20px; 20px);
+    text-transform: uppercase;
+  }
+}
+
+.example__wrapper {
+  @media (min-width: @desktop-width) {
+    position: absolute;
+    right: 0;
+    bottom: 64px;
   }
 }
 
 .example__toggle {
   display: flex;
-  justify-content: space-around;
-  margin-bottom: 25px;
+  justify-content: center;
+  margin-top: 70px;
+  margin-bottom: 31px;
   z-index: 10;
+
+  @media (min-width: @tablet-width) {
+    justify-content: space-between;
+    width: 570px;
+    margin: 0 auto;
+    padding-bottom: 66px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-bottom: 0;
+  }
 }
 
 .example__toggle-text {
@@ -165,11 +212,19 @@
   text-transform: uppercase;
   z-index: 10;
   padding: 0;
+
+  @media (min-width: @tablet-width) {
+    .main-text(20px; 20px);
+  }
 }
 
 .example__toggle-text--wrapper {
   padding: 0;
   border-bottom: 1px dotted var(--basic-border-light-grey);
+
+  @media (min-width: @tablet-width) {
+    padding-top: 5px;
+  }
 
   &:hover {
     border-bottom: 1px solid var(--basic-border-light-grey);
@@ -177,5 +232,14 @@
 
   &:active {
     border-bottom: none;
+  }
+}
+
+.slider__items {
+  height: 215px;
+  padding-top: 23px;
+
+  @media (min-width: @desktop-width) {
+    height: 0;
   }
 }

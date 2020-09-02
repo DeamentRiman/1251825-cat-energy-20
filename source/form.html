@@ -29,22 +29,22 @@
       <form class="form" action="http://echo.htmlacademy.ru">
         <div class="form--wrapper">
         <fieldset class="form__fieldset">
-          <legend class="form__legend form__legend--wrapper container--wrapper">Заполните анкету, и мы подберем программу питания для вашего кота</legend>
+          <legend class="form__legend form__legend--wrapper container--wrapper">Заполните анкету, и мы подберем <br> программу питания для вашего кота</legend>
           <div class="form__item  container--wrapper">
             <label class="form__item-label" for="form_name">Имя:*</label>
             <input class="form__item-input-text" type="text" id="form_name" name="name" placeholder="Барсик">
           </div>
           <div class="form__item container--wrapper">
-            <label class="form__item-label" for="form_weight">Вес (кг):*</label>
+            <label class="form__item-label form__item-label--first" for="form_weight">Вес (кг):*</label>
             <input class="form__item-input-text" type="number" id="form_weight" name="weight" placeholder="7">
           </div>
           <div class="form__item container--wrapper">
-            <label class="form__item-label" for="form_age">Возраст (лет):*</label>
+            <label class="form__item-label form__item-label--second" for="form_age">Возраст (лет):*</label>
             <input class="form__item-input-text" type="number" id="form_age" name="age" placeholder="7">
           </div>
         </fieldset>
 
-        <fieldset class="form__fieldset form__fieldset--wrapper-first container--wrapper">
+        <fieldset class="form__fieldset container--wrapper form__fieldset--wrapper-first">
           <legend class="form__legend visually-hidden">Цель программы питания</legend>
           <div class="form__item">
             <input class="form__item-input-radio" type="radio" name="form-radio" value="slim" id="form_slim" checked>
@@ -66,19 +66,19 @@
           <div class="form__fieldset--wrapper-flex">
             <legend class="form__legend">Контактные данные (владельца кота)</legend>
             <div class="form__item">
-              <label class="form__item-label" for="form_email">E-mail:*</label>
+              <label class="form__item-label form__item-label--third" for="form_email">E-mail:*</label>
               <input class="form__item-input-text" type="email" id="form_email" name="email" placeholder="kuklachev@gmail.com">
             </div>
             <div class="form__item">
-              <label class="form__item-label" for="form_phone" >Телефон:*</label>
-              <input class="form__item-input-text" type="tel" id="form_phone" name="phone" placeholder="8(960)900-60-90">
+              <label class="form__item-label form__item-label--fourth" for="form_phone" >Телефон:*</label>
+              <input class="form__item-input-text" type="tel" id="form_phone" name="phone" placeholder="8 (960) 900-60-90">
             </div>
           </div>
         </fieldset>
 
 
         <fieldset class="form__fieldset form__fieldset--wrapper-second container--wrapper">
-          <legend class="form__legend">Комментарии</legend>
+          <legend class="form__legend form__legend--second-wrapper">Комментарии</legend>
           <textarea class="form__item-input-text form__item-input-text--wrapper" placeholder="Расскажите обо всех повадках кота"></textarea>
         </fieldset>
 
@@ -106,7 +106,7 @@
         </fieldset>
         <div class="form__button container--wrapper">
           <button class="button button--wrapper button--wrapper-form" type="submit">Отправить заявку</button>
-          <p class="form__comment">* - Обязательные поля</p>
+          <p class="form__comment">* — Обязательные поля</p>
         </div>
 
       </form>
@@ -116,10 +116,10 @@
       <section class="contact contact--wrapper">
         <div class="container--wrapper">
           <h2 class="contact__title">
-            Приглашаем к сотрудничеству диллеров!
+            Приглашаем <br> к сотрудничеству дилеров!
           </h2>
           <p class="contact__text">
-            ул. Большая Конюшенная, д. 19/8 Санкт-Петербург
+            ул. Большая Конюшенная, д. 19/8 <span class="contact__text--wrapper">Санкт-Петербург</span>
           </p>
         </div>
       </section>
