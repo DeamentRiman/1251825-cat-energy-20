@@ -1,9 +1,14 @@
 // Начните писать стили здесь
 .contact {
   display: flex;
-  padding-top: 28px;
-  padding-bottom: 22px;
+  padding-top: 27px;
+  padding-bottom: 25px;
   justify-content: space-between;
+
+  @media (min-width: @tablet-width) {
+    padding-top: 62px;
+    padding-bottom: 54px;
+  }
 
   @media (min-width: @desktop-width) {
     position: absolute;
@@ -11,8 +16,8 @@
     height: 201px;
     z-index: 10;
     background-color: var(--basic-font-white);
-    bottom: 200px;
-    left: 110px;
+    bottom: 257px;
+    left: 7.5%;
     margin: 0;
     padding: 0;
   }
@@ -21,6 +26,15 @@
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    /*padding: 0 0 36px 0;*/
+
+    @media (min-width: @tablet-width) {
+      padding: 34px 0 36px 0;
+    }
+
+    @media (min-width: @desktop-width) {
+      padding: 0;
+    }
   }
 }
 
@@ -33,27 +47,33 @@
   }
 
   @media (min-width: @desktop-width) {
+    padding: 0;
     background-color: var(--basic-font-white);
   }
 }
 
 .contact__title {
-  .main-text(16px; 18px);
+  .main-text(16px; 20px);
   text-transform: uppercase;
   color: var(--basic-light-black);
   text-align: left;
+  padding-right: 30px;
+  font-weight: 400;
 
   @media (min-width: @tablet-width) {
-    .main-text(20px; 21px);
+    .main-text(20px; 27px);
     width: 171px;
     margin-left: 41px;
+    /*margin-top: 32px;*/
   }
 
   @media (min-width: @desktop-width) {
-    .main-text(20px; 21px);
+    .main-text(20px; 25px);
     /*width: 163px;*/
-    margin-left: 76px;
+    margin-left: 77px;
     margin-top: 66px;
+    margin-right: 50px;
+    font-weight: 400;
   }
 }
 
@@ -72,9 +92,20 @@
 
   @media (min-width: @desktop-width) {
     .main-text(16px; 20px);
-    width: 159px;
-    margin-top: 62px;
-    margin-right: 89px;
+    width: 173px;
+    margin-top: 65px;
+    margin-right: 87px;
     text-align: left;
+  }
+
+  &--wrapper {
+    @media (min-width: @tablet-width) {
+      display: inline-block;
+      margin-top: 21px;
+    }
+
+    @media (min-width: @desktop-width) {
+      margin-top: 20px;
+    }
   }
 }

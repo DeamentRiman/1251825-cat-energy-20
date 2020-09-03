@@ -39,7 +39,8 @@
 
   @media (min-width: @desktop-width) {
     width: 570px;
-    margin-bottom: 64px;
+    min-height: 375px;
+    margin-bottom: 2px;
   }
 }
 
@@ -57,14 +58,14 @@
     width: 200px;
     height: 200px;
     left: 446px;
-    top: 81px;
+    top: 92px;
   }
 
   @media (min-width: @desktop-width) {
     width: 100px;
     height: 100px;
     left: 52px;
-    top: 41px;
+    top: 47px;
   }
 }
 
@@ -81,7 +82,7 @@
   @media (min-width: @tablet-width) {
     width: 140px;
     height: 192px;
-    left: 476px;
+    left: 478px;
     top: 81px;
   }
 
@@ -128,7 +129,8 @@
   margin: 30px 34px 29px 91px;
 
   @media (min-width: @tablet-width) {
-    margin: 70px 279px 24px 53px;
+    margin: 76px 279px 26px 53px;
+    .main-text(36px; 36px);
   }
 
   @media (min-width: @desktop-width) {
@@ -140,16 +142,31 @@
   font-family: "Arial", sans-serif;
   .main-text(14px; 18px);
   color: var(--basic-dark-grey);
-  margin: 0 33px 3px 20px;
+  padding-bottom: 21px;
+  margin: 0 20px;
+  border-bottom: 1px solid var(--basic-border-gainsboro);
 
   @media (min-width: @tablet-width) {
-    margin: 0 auto 48px 52px;
+    margin: 0 auto 10px 52px;
     width: 377px;
+    .main-text(16px; 24px);
+    border: none;
   }
 
   @media (min-width: @desktop-width) {
-    margin: 0 51px 23px 52px;
+    margin: 0 51px 6px 52px;
     width: 467px;
+    border: none;
+  }
+
+  &--wrapper {
+    @media (min-width: @tablet-width) {
+      width: 342px;
+    }
+
+    @media (min-width: @desktop-width) {
+      width: 457px;
+    }
   }
 }
 
@@ -161,20 +178,21 @@
   text-transform: uppercase;
   text-decoration: none;
   color: var(--basic-black);
-  border-top: 1px solid var(--basic-border-gainsboro);
   margin-left: 20px;
   margin-right: 100px;
-  padding-top: 15px;
-  padding-bottom: 18px;
+  padding-top: 19px;
+  padding-bottom: 22px;
 
   @media (min-width: @tablet-width) {
     border: none;
-    margin: 0 480px 53px 52px;
+    margin: 0 480px 35px 52px;
+    .main-text(20px; 30px);
   }
 
   @media (min-width: @desktop-width) {
     border: none;
-    margin: 0 300px 59px 52px;
+    padding-top: 0;
+    margin: 0 300px 0 52px;
   }
 }
 
@@ -185,11 +203,17 @@
   background-repeat: no-repeat;
   width: 24px;
   height: 12px;
-  bottom: 45%;
-  left: 119px;
+  bottom: 41%;
+  left: 100px;
 
   @media (min-width: @tablet-width) {
-    left: 185px;
+    left: 133px;
+    top: 28px;
+  }
+
+  @media (min-width: @desktop-width) {
+    left: 133px;
+    top: 10px;
   }
 }
 
