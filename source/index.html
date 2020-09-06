@@ -12,7 +12,11 @@
     <header class="page-header">
       <div class="container--wrapper">
         <a class="logo" href="index.html">
-          <img src="img/logo-mobile.svg" width="191" height="38" class="logo__small" alt="Логотип магазина Кэт энерджи">
+          <picture>
+            <source media="(min-width: 1200px)" srcset="img/logo-desktop.svg">
+            <source media="(min-width: 768px)" srcset="img/logo-tablet.svg">
+            <img src="img/logo-mobile.svg" width="191" height="38" class="logo__small" alt="Логотип магазина Кэт энерджи">
+          </picture>
         </a>
         <nav class="page-nav page-nav--close page-nav--js">
           <button class="page-nav__toggle" type="button"><span class="visually-hidden">Открыть меню</span></button>
@@ -137,13 +141,13 @@
           </div>
           <div class="link__social">
                 <a class="link__social-item" href="#">
-                  <img alt="В контакте">
+                  <img src="img/icon-vk.svg" width="23" height="16" alt="В контакте">
                 </a>
                 <a class="link__social-item" href="#">
-                  <img alt="Instagram">
+                  <img src="img/icon-insta.svg" width="16" height="16" alt="Instagram">
                 </a>
                 <a class="link__social-item" href="#">
-                  <img alt="Facebook">
+                  <img src="img/icon-fb.svg" width="10" height="17" alt="Facebook">
                 </a>
           </div>
           <div class="link__academy">
