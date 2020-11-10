@@ -24,6 +24,10 @@
       /*margin-left: 190px;*/
     }
   }
+
+  .container-wrapper {
+    z-index: 2;
+  }
 }
 
 .promo::before {
@@ -70,7 +74,7 @@
     }
   }
 }
-
+/*
 .promo--wrapper {
   margin: 0;
   padding: 0;
@@ -78,10 +82,10 @@
   .container--wrapper {
     z-index: 2;
   }
-}
+}*/
 
 
-.promo--wrapper::before {
+.promo::after {
   content: "";
   position: absolute;
   background-image: url("../img/index-background-mobile@1x.jpg");
@@ -123,7 +127,7 @@
   }
 }
 
-.container--wrapper {
+.container-wrapper {
   @media (min-width: @desktop-width) {
     position: relative;
   }
@@ -185,6 +189,6 @@
   }
 }
 
-.promo-button {
+.promo__button {
   z-index: 10;
 }

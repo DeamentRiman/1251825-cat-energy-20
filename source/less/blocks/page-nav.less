@@ -1,5 +1,5 @@
 // Начните писать стили здесь
-.page-nav {
+.page__header-nav {
   margin: 0;
   display: flex;
   flex-direction: column;
@@ -22,7 +22,7 @@
   }
 }
 
-.page-nav__toggle {
+.page__header-nav-toggle {
   display: flex;
   width: 30%;
   height: auto;
@@ -40,7 +40,7 @@
   }
 }
 
-.page-nav--close .page-nav__list {
+.page__header-nav--close .page__header-nav-list {
   display: none;
 
   @media (min-width: @tablet-width) {
@@ -52,7 +52,7 @@
   }
 }
 
-.page-nav--close .page-nav__toggle::before {
+.page__header-nav--close .page__header-nav-toggle::before {
   /*гамбургер для закрытого меню*/
   content: "";
   position: absolute;
@@ -65,7 +65,7 @@
   right: 6.25%;
 }
 
-.page-nav--active .page-nav__toggle {
+.page__header-nav--active .page__header-nav-toggle {
   content: "";
   position: absolute;
   background-image: url("../img/icon-close.svg");
@@ -86,11 +86,11 @@
   }
 }
 
-.page-nav--js .page-nav__toggle {
+.page__header-nav--none .page__header-nav-toggle {
   display: none;
 }
 
-.page-nav__list {
+.page__header-nav-list {
   width: 100%;
   /*display: none;*/
   /*width: 440px;
@@ -113,7 +113,7 @@
   }
 }
 
-.page-nav__list--active {
+.page__header-nav--active {
   /*стиль для JS*/
   display: flex;
   flex-direction: column;
@@ -124,7 +124,7 @@
   }
 }
 
-.page-nav__list-item {
+.page__header-nav-list-item {
   .main-text(20px; 20px);
   color: var(--basic-black);
   font-weight: 500;
@@ -158,7 +158,7 @@
   }
 }
 
-.page-nav__list-item--wrapper {
+.page__header-nav-list-item--active {
   @media (min-width: @tablet-width) {
     color: var(--basic-black);
     padding-bottom: 10px;
@@ -166,31 +166,31 @@
   }
 }
 
-.page-nav__list-link {
+.page__header-nav-list-link {
   color: var(--basic-black);
   padding-bottom: 8px;
 }
 
-.page-nav__list--index {
-  .page-nav__list-link {
+.page__header-nav-list--index {
+  .page__header-nav-list-link {
     @media (min-width: @desktop-width) {
       color: var(--basic-font-white);
     }
   }
 
-  .page-nav__list-link:hover {
+  .page__header-nav-list-link:hover {
     @media (min-width: @desktop-width) {
       opacity: 0.6;
     }
   }
 
-  .page-nav__list-link:active {
+  .page__header-nav-list-link:active {
     @media (min-width: @desktop-width) {
       opacity: 0.3;
     }
   }
 
-  .page-nav__list-item--wrapper {
+  .page__header-nav-list-item--wrapper {
     @media (min-width: @desktop-width) {
       padding-bottom: 10px;
       border-bottom: 2px solid var(--basic-font-white);

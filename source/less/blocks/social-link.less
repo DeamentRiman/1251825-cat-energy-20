@@ -1,5 +1,5 @@
 // Начните писать стили здесь
-.link {
+.social-link {
   display: flex;
   background-color: var(--basic-grey);
   border: 1px solid orangered;
@@ -13,7 +13,7 @@
     border: none;
   }
 
-  .container--wrapper {
+  .container-wrapper {
     display: flex;
     flex-direction: column;
 
@@ -25,7 +25,7 @@
   }
 }
 
-.link__logo {
+.social-link__logo {
   text-align: center;
   padding-top: 41px;
   padding-bottom: 29px;
@@ -46,7 +46,7 @@
   }
 }
 
-.link__social {
+.social-link__list {
   display: flex;
   justify-content: space-between;
   padding-top: 22px;
@@ -67,7 +67,11 @@
   }
 }
 
-.link__academy {
+.social-link__list-item {
+  list-style: none;
+}
+
+.social-link__academy {
   display: flex;
   justify-content: space-between;
   padding-top: 29px;
@@ -82,7 +86,7 @@
   }
 }
 
-.link__academy-link {
+.social-link__academy-text {
   font-family: "Arial", sans-serif;
   .main-text(16px; 18px);
   color: var(--basic-dark-grey);
