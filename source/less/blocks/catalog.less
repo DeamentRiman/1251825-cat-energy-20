@@ -23,7 +23,6 @@
   margin: 0 auto;
   display: flex;
   flex-direction: column;
-  outline: 2px solid seagreen;
 
   @media (min-width: @tablet-width) {
     margin: 0 auto;
@@ -44,14 +43,14 @@
   width: 100%;
   .main-text(36px; 36px);
   padding-top: 27px;
-  padding-bottom: 41px;
+  padding-bottom: 40px;
   text-align: left;
   font-weight: 400;
 
   @media (min-width: @tablet-width) {
     .main-text(60px; 60px);
     padding: 0;
-    margin-top: 55px;
+    margin-top: 63px;
     margin-bottom: 84px;
     text-align: left;
     /*width: 226px;*/
@@ -73,13 +72,9 @@
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: center;
-  /*max-width: 280px;*/
-  /*margin-bottom: 19px;*/
-  padding-top: 19px;
-  padding-bottom: 24px;
+  padding-bottom: 23px;
   border-top: 1px solid var(--basic-border-catalog);
   position: relative;
-  /*outline: 1px solid lightcoral;*/
   z-index: 10;
 
   @media (min-width: @tablet-width) {
@@ -103,10 +98,10 @@
     flex-direction: column;
     flex-wrap: nowrap;
     width: 245px;
-    height: 511px;
+    height: 522px;
     outline: 1px solid hotpink;
     margin-right: 80px;
-    margin-bottom: 63px;
+    margin-bottom: 52px;
     border: none;
   }
 }
@@ -127,30 +122,46 @@
   }
 }
 
-.catalog__item-img {
+.catalog__item-img-size {
+  position: relative;
   width: 138px;
-  height: 112px;
-  outline: 1px solid green;
+  height: 144px;
+  margin-left: auto;
+
+  @media (min-width: @tablet-width) {
+    position: relative;
+    z-index: 15;
+    width: 323px;
+    height: 200px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 245px;
+    height: 174px;
+  }
+}
+
+.catalog__item-img {
+  bottom: 0;
+  z-index: 15;
 
   @media (min-width: @tablet-width) {
     position: absolute;
-    left: 78px;
-    top: 0;
-    background-color: yellowgreen;
-    width: 168px;
-    height: 200px;
-    z-index: 15;
+    width: 323px;
+    height: auto;
+    bottom: -12px;
   }
 
   @media (min-width: @desktop-width) {
     position: absolute;
-    left: 39px;
-    top: 0;
-    background-color: yellowgreen;
-    width: 172px;
-    height: 196px;
-    z-index: 15;
+    width: 245px;
+    height: auto;
+    bottom: -40px;
   }
+}
+
+.catalog__item-text {
+  margin-right: auto;
 }
 
 .catalog__item-text::before {
@@ -172,7 +183,7 @@
     left: 0;
     background-color: var(--basic-grey);
     width: 100%;
-    height: 431px;
+    height: 430px;
     z-index: -1;
   }
 }
@@ -188,9 +199,10 @@
   color: var(--basic-catalog-title);
   max-width: 77px;
   z-index: 5;
+  margin-top: 20px;
 
   @media (min-width: @tablet-width) {
-    margin: 242px 72px 11px 76px;
+    margin: 46px 72px 11px 76px;
     font-size: 20px;
     line-height: 24px;
     max-width: 174px;
@@ -200,7 +212,7 @@
 
   @media (min-width: @desktop-width) {
     padding: 0;
-    margin: 243px 47px 14px 53px;
+    margin: 80px 47px 14px 53px;
     font-size: 20px;
     line-height: 22px;
     max-width: 174px;
@@ -223,7 +235,7 @@
   }
 }
 
-.catalog__table-sell {
+.catalog__table-text {
   font-family: "Arial", sans-serif;
   .main-text(12px; 14px);
   font-weight: 400;
@@ -233,7 +245,7 @@
   @media (min-width: @tablet-width) {
     .main-text(16px; 16px);
     padding-top: 7px;
-    padding-bottom: 7px;
+    padding-bottom: 6px;
     border-bottom: 1px solid var(--basic-border-light-grey);
   }
 
@@ -246,7 +258,7 @@
   }
 }
 
-.catalog__table-sell--wrapper {
+.catalog__table-text--text-position {
   text-align: right;
 }
 
@@ -268,11 +280,7 @@
     width: 245px;
   }
 }
-/*
-.catalog__item-text {
-  margin-bottom: 8px;
-}
-*/
+
 .catalog__item-plus-text::before {
   @media (min-width: @tablet-width) {
     content: "";
@@ -285,23 +293,27 @@
     z-index: 1;
     border: 2px solid var(--basic-grey);
   }
+
+  @media (min-width: @desktop-width) {
+    bottom: 49px;
+  }
 }
 
 .catalog__plus-text {
   .main-text(16px; 20px);
   text-transform: uppercase;
-  margin-top: 59px;
+  margin-top: 60px;
   margin-bottom: 8px;
   color: var(--basic-light-black);
 
   @media (min-width: @tablet-width) {
-    margin: 242px 90px 23px 90px;
+    margin: 246px 90px 23px 90px;
     .main-text(20px; 22px);
     text-align: center;
   }
 
   @media (min-width: @desktop-width) {
-    margin: 243px 55px 23px 56px;
+    margin: 253px 55px 23px 56px;
     .main-text(20px; 22px);
     text-align: center;
   }
@@ -323,3 +335,5 @@
     margin: 0 39px 87px 39px;
   }
 }
+
+

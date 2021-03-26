@@ -1,7 +1,7 @@
 // Начните писать стили здесь
 .contact {
   display: flex;
-  padding-top: 27px;
+  padding-top: 30px;
   padding-bottom: 25px;
   justify-content: space-between;
 
@@ -22,7 +22,7 @@
     padding: 0;
   }
 
-  .container--wrapper {
+  .container-wrapper {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -39,7 +39,7 @@
 }
 
 .contact--wrapper {
-  padding: 28px 20px 22px 20px;
+  padding: 27px 20px 22px 20px;
   background-color: var(--basic-grey);
 
   @media (min-width: @tablet-width) {
@@ -57,11 +57,12 @@
   text-transform: uppercase;
   color: var(--basic-light-black);
   text-align: left;
-  padding-right: 30px;
+  /*padding-right: 30px;*/
   font-weight: 400;
+  width: 50%;
 
   @media (min-width: @tablet-width) {
-    .main-text(20px; 27px);
+    .main-text(20px; 26px);
     width: 171px;
     margin-left: 41px;
     /*margin-top: 32px;*/
@@ -82,6 +83,7 @@
   .main-text(14px; 20px);
   color: var(--basic-dark-grey);
   text-align: left;
+  width: 50%;
 
   @media (min-width: @tablet-width) {
     .main-text(16px; 20px);
@@ -92,13 +94,13 @@
 
   @media (min-width: @desktop-width) {
     .main-text(16px; 20px);
-    width: 173px;
+    width: 155px;
     margin-top: 65px;
     margin-right: 87px;
     text-align: left;
   }
 
-  &--wrapper {
+  &-indent {
     @media (min-width: @tablet-width) {
       display: inline-block;
       margin-top: 21px;

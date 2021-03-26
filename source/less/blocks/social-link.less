@@ -1,8 +1,7 @@
 // Начните писать стили здесь
-.link {
+.social-link {
   display: flex;
   background-color: var(--basic-grey);
-  border: 1px solid orangered;
   /*padding-top: 39px;*/
   /*padding-bottom: 22px;*/
 
@@ -13,7 +12,7 @@
     border: none;
   }
 
-  .container--wrapper {
+  .container-wrapper {
     display: flex;
     flex-direction: column;
 
@@ -25,9 +24,9 @@
   }
 }
 
-.link__logo {
+.social-link__logo {
   text-align: center;
-  padding-top: 39px;
+  padding-top: 41px;
   padding-bottom: 29px;
   border-bottom: 1px solid var(--basic-border-gainsboro);
 
@@ -46,27 +45,56 @@
   }
 }
 
-.link__social {
+.social-link__logo--wrapper{
+  height: 24px;
+}
+
+.social-link__list {
   display: flex;
   justify-content: space-between;
-  padding-top: 27px;
+  padding-top: 22px;
   padding-bottom: 17px;
   border-bottom: 1px solid var(--basic-border-gainsboro);
+  padding-left: 74px;
+  padding-right: 83px;
 
   @media (min-width: @tablet-width) {
+    padding-left: 0;
+    padding-right: 0;
     border: none;
+    width: 130px;
   }
 
-  @media (min-width: @desktop-width) {
+  @media (7min-width: @desktop-width) {
     border: none;
   }
 }
 
-.link__academy {
+.social-link__list-item {
+  list-style: none;
+}
+
+.social-link__list-item-vk{
+  width: 23px;
+  height: 16px;
+}
+
+.social-link__list-item-insta{
+  width: 16px;
+  height: 16px;
+}
+
+.social-link__list-item-fb{
+  width: 10px;
+  height: 17px;
+}
+
+.social-link__academy {
   display: flex;
   justify-content: space-between;
   padding-top: 29px;
   padding-bottom: 22px;
+  align-items: center;
 
   @media (min-width: @tablet-width) {
     margin: 0;
@@ -77,9 +105,19 @@
   }
 }
 
-.link__academy-link {
+.social-link__academy-text {
   font-family: "Arial", sans-serif;
   .main-text(16px; 18px);
   color: var(--basic-dark-grey);
   /*padding-right: 30px;*/
+
+  @media (min-width: @tablet-width){
+    margin-right: 22px;
+  }
+}
+
+.social-link__academy-logo{
+  width: 27px;
+  height: 34px;
+  fill: var(--basic-spesial-grey);
 }
