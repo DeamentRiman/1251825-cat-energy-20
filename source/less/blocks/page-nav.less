@@ -1,5 +1,6 @@
 // Начните писать стили здесь
 .page__header-nav {
+  position: relative;
   margin: 0;
   display: flex;
   flex-direction: column;
@@ -22,9 +23,12 @@
   }
 }
 
-.page__header-nav-toggle {
+.page-header__nav-toggle{
+  top: 10px;
+  right: 20px;
   display: flex;
-  width: 30%;
+  border: none;
+  /*width: 30%;
   height: auto;
   border: none;
   margin-left: 0;
@@ -40,6 +44,20 @@
   }
 }
 
+.page-header__nav-toggle::before{
+  content: "";
+  display: block;
+  position: absolute;
+  top: -10px;
+  right: 0;
+  width: 26px;
+  height: 19px;
+  background-color: #000000;
+  box-shadow:
+      0 8px 0 #000000,
+      0 16px 0 #000000;
+}
+
 .page__header-nav--close .page__header-nav-list {
   display: none;
 
@@ -51,10 +69,19 @@
     display: flex;
   }
 }
-
+/*
+.page__header-nav--close .page-header__nav-toggle{
+  position: absolute;
+  content: "";
+  width: 24;
+  height: 16px;
+  top: 10px;
+  right: 10px;
+}*/
+/*
 .page__header-nav--close .page__header-nav-toggle::before {
   /*гамбургер для закрытого меню*/
-  content: "";
+ /* content: "";
   position: absolute;
   background-image: url("../../img/icon-mobile-menu.svg");
   background-repeat: no-repeat;
@@ -64,6 +91,7 @@
   top: 35%;
   right: 6.25%;
 }
+
 
 .page__header-nav--active .page__header-nav-toggle {
   content: "";
@@ -86,7 +114,8 @@
   }
 }
 
-.page__header-nav--none .page__header-nav-toggle {
+
+.page__header-nav--none {
   display: none;
 }
 
@@ -197,3 +226,5 @@
     }
   }
 }
+
+

@@ -82,11 +82,13 @@
 
 // Начните писать стили здесь
 .page-header__nav {
+  position: relative;
   margin: 0;
   display: flex;
   flex-direction: column;
   align-items: center;
   width: 100%;
+  z-index: 1;
   /*min-height: 66px;*/
   border-bottom: 1px solid var(--basic-whisper);
 
@@ -104,14 +106,10 @@
   }
 }
 
-.page-header__nav-toggle {
-  display: flex;
-  width: 30%;
-  height: auto;
+.page-header__nav-toggles{
+  width: 18px;
+  height: 18px;
   border: none;
-  margin-left: 0;
-  /*margin-right: 20px;
-  /*cursor: pointer;*/
 
   @media (min-width: @tablet-width) {
     display: none;
@@ -122,31 +120,108 @@
   }
 }
 
-.page-header__nav--close .page-header__nav-list {
-  display: none;
+.page-header__nav-toggle, /*гамбургер*/
+.page-header__nav-toggle--close /*крестик*/
+{
+  content:"";
+  position: absolute;
+  top: -50px;
+  right: 6.25%;
+  background-color: transparent;
 
   @media (min-width: @tablet-width) {
-    display: flex;
+    display: none;
   }
 
   @media (min-width: @desktop-width) {
-    display: flex;
+    display: none;
   }
 }
 
-.page-header__nav--close .page-header__nav-toggle::before {
+.page-header__nav-toggle::before { /*гамбургер*/
   /*гамбургер для закрытого меню*/
   content: "";
+  display: block;
   position: absolute;
-  background-image: url("../../img/icon-mobile-menu.svg");
-  background-repeat: no-repeat;
-  background-position-x: right;
   width: 24px;
-  height: 16px;
-  top: 35%;
+  height: 2px;
+  top: 9px;
   right: 6.25%;
+  background-color: var(--basic-black);
+  box-shadow:
+      0 8px 0 var(--basic-black),
+      0 16px 0 var(--basic-black);
+
+  @media (min-width: @tablet-width) {
+    display: none;
+  }
+
+  @media (min-width: @desktop-width) {
+    display: none;
+  }
 }
 
+.page-header__nav-toggle--close::before { /*крестик*/
+  content: "";
+  display: block;
+  position: absolute;
+  width: 24px;
+  height: 2px;
+  top: 15px;
+  right: 6.25%;
+  background-color: var(--basic-black);
+  border: none;
+  transform: rotate(45deg);
+
+  @media (min-width: @tablet-width) {
+    display: none;
+    }
+
+  @media (min-width: @desktop-width) {
+    display: none;
+    }
+  }
+
+.page-header__nav-toggle--close::after{ /*крестик*/
+  content: "";
+  display: block;
+  position: absolute;
+  width: 24px;
+  height: 2px;
+  top: 15px;
+  right: 6.25%;
+  background-color: var(--basic-black);
+  transform: rotate(-45deg);
+
+  @media (min-width: @tablet-width) {
+    display: none;
+  }
+
+  @media (min-width: @desktop-width) {
+    display: none;
+  }
+}
+
+/*
+.page-header__nav-active{
+  content: "";
+  position: absolute;
+  background-repeat: no-repeat;
+  background-position-x: right;
+  background-color: transparent;
+  width: 18px;
+  height: 18px;
+  top: 35%;
+  right: 7.25%;
+
+  @media (min-width: @tablet-width) {
+    display: none;
+  }
+}*/
+
+/*Заккоментирован из-за  SVG спрайта**/
+
+/*
 .page-header__nav--active .page-header__nav-toggle {
   content: "";
   position: absolute;
@@ -166,30 +241,26 @@
   @media (min-width: @desktop-width) {
     display: none;
   }
-}
-
+}*/
+/*
 .page-header__nav--none .page-header__nav-toggle {
   display: none;
-}
+}*/
 
 .page-header__nav-list {
   width: 100%;
-  /*display: none;*/
-  /*width: 440px;
-  margin-left: 95px;
-  /*как обойтись без ширины?*/
-  /*margin-top: 18px;*/
+  display: flex;
+  flex-direction: column;
 
   @media (min-width: @tablet-width) {
     display: flex;
+    flex-direction: row;
     justify-content: space-between;
     color: var(--basic-black);
     width: 100%;
   }
 
   @media (min-width: @desktop-width) {
-    display: flex;
-    justify-content: space-between;
     width: 100%;
     /*margin-left: 540px;*/
   }
@@ -277,5 +348,29 @@
       padding-bottom: 10px;
       border-bottom: 2px solid var(--basic-font-white);
     }
+  }
+}
+
+.page__header-nav--close .page-header__nav-list {
+  display: none;
+
+  @media (min-width: @tablet-width) {
+    display: flex;
+  }
+
+  @media (min-width: @desktop-width) {
+    display: flex;
+  }
+}
+
+.page-header__nav--active .page-header__nav-list {
+  display: flex;
+
+  @media (min-width: @tablet-width) {
+    display: flex;
+  }
+
+  @media (min-width: @desktop-width) {
+    display: flex;
   }
 }

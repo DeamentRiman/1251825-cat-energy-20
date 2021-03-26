@@ -212,16 +212,17 @@
   }
 }
 
-.additional_surprise::before {
+.additional_surprise_box {
   content: "";
   position: absolute;
-  background-image: url("../img/icon-gift.svg");
   background-repeat: no-repeat;
-  width: 66px;
-  height: 61px;
+  display: block;
+  width: 55.5px;
+  height: 60px;
   top: 64px;
   left: 112px;
   z-index: 2;
+  fill: var(--basic-font-white);
 
   @media (min-width: @tablet-width) {
     top: 63px;
