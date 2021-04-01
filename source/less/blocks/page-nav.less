@@ -6,7 +6,6 @@
   flex-direction: column;
   align-items: center;
   width: 100%;
-  /*min-height: 66px;*/
   border-bottom: 1px solid var(--basic-whisper);
 
   @media (min-width: @tablet-width) {
@@ -23,17 +22,11 @@
   }
 }
 
-.page-header__nav-toggle{
+.page-header__nav-toggle {
   top: 10px;
   right: 20px;
   display: flex;
   border: none;
-  /*width: 30%;
-  height: auto;
-  border: none;
-  margin-left: 0;
-  /*margin-right: 20px;
-  /*cursor: pointer;*/
 
   @media (min-width: @tablet-width) {
     display: none;
@@ -44,7 +37,7 @@
   }
 }
 
-.page-header__nav-toggle::before{
+.page-header__nav-toggle::before {
   content: "";
   display: block;
   position: absolute;
@@ -52,10 +45,10 @@
   right: 0;
   width: 26px;
   height: 19px;
-  background-color: #000000;
+  background-color: var(--basic-black);
   box-shadow:
-      0 8px 0 #000000,
-      0 16px 0 #000000;
+    0 8px 0 var(--basic-black),
+    0 16px 0 var(--basic-black);
 }
 
 .page__header-nav--close .page__header-nav-list {
@@ -69,63 +62,9 @@
     display: flex;
   }
 }
-/*
-.page__header-nav--close .page-header__nav-toggle{
-  position: absolute;
-  content: "";
-  width: 24;
-  height: 16px;
-  top: 10px;
-  right: 10px;
-}*/
-/*
-.page__header-nav--close .page__header-nav-toggle::before {
-  /*гамбургер для закрытого меню*/
- /* content: "";
-  position: absolute;
-  background-image: url("../../img/icon-mobile-menu.svg");
-  background-repeat: no-repeat;
-  background-position-x: right;
-  width: 24px;
-  height: 16px;
-  top: 35%;
-  right: 6.25%;
-}
-
-
-.page__header-nav--active .page__header-nav-toggle {
-  content: "";
-  position: absolute;
-  background-image: url("../img/icon-close.svg");
-  background-repeat: no-repeat;
-  background-position-x: right;
-  background-color: transparent;
-  width: 18px;
-  height: 18px;
-  top: 9%;
-  right: 7.25%;
-
-  @media (min-width: @tablet-width) {
-    display: none;
-  }
-
-  @media (min-width: @desktop-width) {
-    display: none;
-  }
-}
-
-
-.page__header-nav--none {
-  display: none;
-}
 
 .page__header-nav-list {
   width: 100%;
-  /*display: none;*/
-  /*width: 440px;
-  margin-left: 95px;
-  /*как обойтись без ширины?*/
-  /*margin-top: 18px;*/
 
   @media (min-width: @tablet-width) {
     display: flex;
@@ -138,7 +77,6 @@
     display: flex;
     justify-content: space-between;
     width: 100%;
-    /*margin-left: 540px;*/
   }
 }
 
@@ -175,7 +113,6 @@
   @media (min-width: @desktop-width) {
     font-weight: 400;
     .main-text (20px, 20px);
-    /*черный цвет оставлен временно для отладки стилей*/
   }
 
   &:hover {
@@ -226,5 +163,3 @@
     }
   }
 }
-
-

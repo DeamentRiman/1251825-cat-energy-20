@@ -106,7 +106,7 @@
   }
 }
 
-.page-header__nav-toggles{
+.page-header__nav-toggles {
   width: 18px;
   height: 18px;
   border: none;
@@ -121,9 +121,8 @@
 }
 
 .page-header__nav-toggle, /*гамбургер*/
-.page-header__nav-toggle--close /*крестик*/
-{
-  content:"";
+.page-header__nav-toggle--close { /*крестик*/
+  content: "";
   position: absolute;
   top: -50px;
   right: 6.25%;
@@ -149,8 +148,8 @@
   right: 6.25%;
   background-color: var(--basic-black);
   box-shadow:
-      0 8px 0 var(--basic-black),
-      0 16px 0 var(--basic-black);
+    0 8px 0 var(--basic-black),
+    0 16px 0 var(--basic-black);
 
   @media (min-width: @tablet-width) {
     display: none;
@@ -175,14 +174,14 @@
 
   @media (min-width: @tablet-width) {
     display: none;
-    }
+  }
 
   @media (min-width: @desktop-width) {
     display: none;
-    }
   }
+}
 
-.page-header__nav-toggle--close::after{ /*крестик*/
+.page-header__nav-toggle--close::after { /*крестик*/
   content: "";
   display: block;
   position: absolute;
