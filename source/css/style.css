@@ -301,16 +301,19 @@
   width: 280px;
   margin: 0 auto;
 }
+
 @media (min-width: 768px) {
   .container-wrapper {
     width: 708px;
   }
 }
+
 @media (min-width: 1440px) {
   .container-wrapper {
     width: 1220px;
   }
 }
+
 .page-header {
   /*padding: 0 20px;
   /*display: flex;

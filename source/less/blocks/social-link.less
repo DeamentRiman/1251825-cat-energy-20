@@ -18,6 +18,7 @@
       flex-direction: row;
       justify-content: space-between;
       align-items: center;
+      padding: 0 30px;
     }
   }
 }
@@ -30,8 +31,12 @@
 
   @media (min-width: @tablet-width) {
     border: none;
-    padding-top: 61px;
+    padding-top: 54px;
     padding-bottom: 62px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-top: 64px;
   }
 
   &:hover {
@@ -45,11 +50,17 @@
 
 .social-link__logo--wrapper {
   height: 24px;
+  width: 280px;
+
+  @media (min-width: @tablet-width) {
+    width: 128px;
+  }
 }
 
 .social-link__list {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   padding-top: 22px;
   padding-bottom: 17px;
   border-bottom: 1px solid var(--basic-border-gainsboro);
@@ -57,14 +68,14 @@
   padding-right: 83px;
 
   @media (min-width: @tablet-width) {
-    padding-left: 0;
-    padding-right: 0;
+    padding: 12px 0 20px 17px;
     border: none;
-    width: 130px;
+    width: 123px;
   }
 
   @media (min-width: @desktop-width) {
     border: none;
+    padding: 21px 0 20px 22px;
   }
 }
 
@@ -75,31 +86,50 @@
 .social-link__list-item-vk {
   width: 23px;
   height: 16px;
+  fill: var(--basic-spesial-grey);
+
+  @media (min-width: @tablet-width){
+    width: 29px;
+    height: 17px;
+  }
 }
 
 .social-link__list-item-insta {
   width: 16px;
   height: 16px;
+  fill: var(--basic-spesial-grey);
+
+  @media (min-width: @tablet-width){
+    width: 23px;
+    height: 23px;
+  }
 }
 
 .social-link__list-item-fb {
   width: 10px;
   height: 17px;
+  fill: var(--basic-spesial-grey);
+
+  @media (min-width: @tablet-width){
+    width: 14px;
+    height: 26px;
+  }
 }
 
 .social-link__academy {
   display: flex;
   justify-content: space-between;
-  padding-top: 29px;
+  padding-top: 21px;
   padding-bottom: 22px;
   align-items: center;
 
   @media (min-width: @tablet-width) {
     margin: 0;
+    padding-top: 9px;
   }
 
   @media (min-width: @desktop-width) {
-    margin: 0;
+    margin-top: 19px;
   }
 }
 
@@ -109,12 +139,21 @@
   color: var(--basic-dark-grey);
 
   @media (min-width: @tablet-width) {
-    margin-right: 22px;
+    margin-right: 18px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-right: 13px;
   }
 }
 
 .social-link__academy-logo {
-  width: 27px;
-  height: 34px;
+  width: 37px;
+  height: 40px;
   fill: var(--basic-spesial-grey);
+
+  @media (min-width: @tablet-width) {
+    width: 37px;
+    height: 40px;
+  }
 }

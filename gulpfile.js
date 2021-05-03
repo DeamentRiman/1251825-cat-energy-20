@@ -26,7 +26,7 @@ exports.clean = clean;
 //Copy
 const copy = () => {
   return gulp.src([
-    "source/fonts/**/*.{woff, woff2}",
+    "source/fonts/**/*.{woff2, woff}",
     "source/img/**",
     "source/js/**",
     ], {
@@ -142,5 +142,6 @@ exports.default = gulp.series(
   styles, scripts,  server, watcher
 );
 
+/*gulp.task('build', gulp.series(clean, copy, styles, html, scripts));*/
 gulp.task('build', gulp.series(clean, copy, styles, html, sprite, images, createWebp, scripts));
 gulp.task("start", gulp.series("build", server));

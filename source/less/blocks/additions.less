@@ -4,6 +4,7 @@
   padding: 0;
   display: flex;
   flex-direction: column;
+  position: relative;
 
   @media (min-width: @desktop-width) {
     margin-bottom: 86px;
@@ -13,6 +14,44 @@
       flex-direction: row;
       justify-content: space-between;
       flex-wrap: wrap;
+    }
+  }
+
+  &::before {
+    @media (min-width: @tablet-width) {
+      content: "";
+      position: absolute;
+      min-width: 30px;
+      height: 2px;
+      left: 0;
+      top: 31px;
+      background-color: var(--basic-green-button);
+    }
+
+    @media (min-width: @desktop-width) {
+      min-width: 70px;
+      max-width: 200px;
+      top: 37px;
+    }
+  }
+
+  &::after {
+    content: "";
+      position: absolute;
+      min-width: 53px;
+      height: 2px;
+      right: 0;
+      top: 44px;
+      background-color: var(--basic-green-button);
+
+    @media (min-width: @tablet-width) {
+      min-width: 328px;
+      top: 31px;
+    }
+
+    @media (min-width: @desktop-width) {
+      min-width: 957px;
+      top: 37px;
     }
   }
 }
@@ -50,9 +89,20 @@
     padding: 0;
     /*margin: 0 110px;*/
     border: none;
-    margin-top: 24px;
-    margin-bottom: 81px;
+    margin-top: 16px;
+    margin-bottom: 75px;
   }
+/*
+  &::before{
+  @media (min-width: @tablet-width) {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background-color: var(--basic-green-button);
+    left: 0;
+    }
+  }*/
 }
 
 .additions__item {
@@ -217,7 +267,7 @@
   position: absolute;
   background-repeat: no-repeat;
   display: block;
-  width: 55.5px;
+  width: 60px;
   height: 60px;
   top: 64px;
   left: 112px;
