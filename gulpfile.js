@@ -11,6 +11,7 @@ const terser = require("gulp-terser");
 const imagemin = require("gulp-imagemin");
 const webp = require("gulp-webp");
 const svgstore = require("gulp-svgstore");
+<<<<<<< HEAD
 const posthtml = require("gulp-posthtml");
 const include = require("posthtml-include");
 const htmlmin = require("gulp-htmlmin");
@@ -35,6 +36,8 @@ const copy = () => {
   .pipe(gulp.dest("build"));
 }
 exports.copy = copy;
+=======
+>>>>>>> 953a209bc20b0f70c31a950f09bd57f63ac1869d
 
 // Styles
 
@@ -69,6 +72,7 @@ const server = (done) => {
 }
 exports.server = server;
 
+<<<<<<< HEAD
 //HTML
 const html = () => {
   return gulp
@@ -91,6 +95,15 @@ const scripts = () => {
   .pipe(terser())
   .pipe(rename("nav-open.min.js"))
   .pipe(gulp.dest("build/js"))
+=======
+//JS
+
+const scripts = () => {
+  return gulp.src('js/nav-open.js')
+  .pipe(terser())
+  .pipe(rename("nav-open.min.css"))
+  .pipe(gulp.dest("js"))
+>>>>>>> 953a209bc20b0f70c31a950f09bd57f63ac1869d
   .pipe(sync.stream());
 }
 exports.scripts = scripts;
@@ -126,7 +139,11 @@ const sprite = () => {
   return gulp.src("source/img/**/icon-*.svg")
     .pipe(svgstore())
     .pipe(rename("sprite.svg"))
+<<<<<<< HEAD
     .pipe(gulp.dest("build/img"))
+=======
+    .pipe(gulp.dest("source/img"))
+>>>>>>> 953a209bc20b0f70c31a950f09bd57f63ac1869d
 }
 exports.sprite = sprite;
 
