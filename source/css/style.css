@@ -301,19 +301,28 @@
   width: 280px;
   margin: 0 auto;
 }
+<<<<<<< HEAD
 
+=======
+>>>>>>> 953a209bc20b0f70c31a950f09bd57f63ac1869d
 @media (min-width: 768px) {
   .container-wrapper {
     width: 708px;
   }
 }
+<<<<<<< HEAD
 
+=======
+>>>>>>> 953a209bc20b0f70c31a950f09bd57f63ac1869d
 @media (min-width: 1440px) {
   .container-wrapper {
     width: 1220px;
   }
 }
+<<<<<<< HEAD
 
+=======
+>>>>>>> 953a209bc20b0f70c31a950f09bd57f63ac1869d
 .page-header {
   /*padding: 0 20px;
   /*display: flex;
