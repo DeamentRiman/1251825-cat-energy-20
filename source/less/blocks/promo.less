@@ -1,11 +1,10 @@
 // Начните писать стили здесь
 .promo {
   position: relative;
-  margin: 0;
+  margin: 0 0 23px 0;
   padding: 0;
   display: flex;
   flex-direction: column;
-  margin-bottom: 22px;
 
   @media (min-width: @tablet-width) {
     margin: 0 30px;
@@ -14,15 +13,16 @@
 
   @media (min-width: @desktop-width) {
     margin: 0;
-    margin-bottom: 89px;
+    margin-bottom: 100px;
     height: 566px;
 
     .button {
       margin-left: 80px;
-      /*margin-top: 396px;
-      margin-bottom: 267px;
-      /*margin-left: 190px;*/
     }
+  }
+
+  .container-wrapper {
+    z-index: 2;
   }
 }
 
@@ -37,6 +37,11 @@
   top: 166px;
   z-index: 2;
 
+  @media (min-resolution: 2dppx) {
+    background-image: url("../img/index-can-mobile@2x.png");
+    background-size: 280px auto;
+  }
+
   @media (min-width: @tablet-width) {
     background-image: url("../img/index-can-tablet@1x.jpg");
     background-position-x: center;
@@ -44,6 +49,11 @@
     height: 609px;
     top: 254px;
     z-index: 1;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/index-can-tablet@2x.jpg");
+      background-size: 709px auto;
+    }
   }
 
   @media (min-width: @desktop-width) {
@@ -51,22 +61,17 @@
     width: 50%;
     height: 499px;
     left: 33%;
-    top: 20px;
+    top: 31px;
     z-index: 4;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/index-can-desktop@2x.png");
+      background-size: 552px auto;
+    }
   }
 }
 
-.promo--wrapper {
-  margin: 0;
-  padding: 0;
-
-  .container--wrapper {
-    z-index: 2;
-  }
-}
-
-
-.promo--wrapper::before {
+.promo::after {
   content: "";
   position: absolute;
   background-image: url("../img/index-background-mobile@1x.jpg");
@@ -77,6 +82,11 @@
   background-position-x: center;
   margin-bottom: 145px;
 
+  @media (min-resolution: 2dppx) {
+    background-image: url("../img/index-background-mobile@2x.jpg");
+    background-size: auto 305px;
+  }
+
   @media (min-width: @tablet-width) {
     background-image: none;
     background-color: transparent;
@@ -86,8 +96,8 @@
   @media (min-width: @desktop-width) {
     content: "";
     position: absolute;
-    background-color: var(--basic-green-button);
-    top: -125px;
+    background-color: var(--basic-index-green);
+    top: -114px;
     right: 0;
     background-position-x: right;
     width: 50%;
@@ -95,17 +105,21 @@
     z-index: 1;
     margin-bottom: 0;
     background-image: url("../img/index-background-desktop@1x.jpg");
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/index-background-desktop@2x.jpg");
+      background-size: auto 698px;
+    }
   }
 }
 
-.container--wrapper {
+.container-wrapper {
   @media (min-width: @desktop-width) {
     position: relative;
   }
 }
 
 .promo__title {
-  /*.main-text(30px; 36px);*/
   font-family: "Oswald", sans-serif;
   font-size: 34px;
   line-height: 36px;
@@ -123,14 +137,16 @@
     color: var(--basic-black);
     margin: 53px 30px 41px 87px;
     text-align: left;
+    letter-spacing: 0.01px;
   }
 
   @media (min-width: @desktop-width) {
     margin: 0;
     padding-left: 80px;
     width: 420px;
-    margin-top: 101px;
+    margin-top: 113px;
     margin-bottom: 40px;
+    letter-spacing: 0.01px;
   }
 }
 
@@ -158,6 +174,6 @@
   }
 }
 
-.promo-button {
+.promo__button {
   z-index: 10;
 }

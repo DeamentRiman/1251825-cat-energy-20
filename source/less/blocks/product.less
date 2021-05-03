@@ -1,6 +1,6 @@
 // Начните писать стили здесь
 .product {
-  margin: 0 20px;
+  /*margin: 0 20px;*/
   display: flex;
   flex-direction: column;
   padding-bottom: 7px;
@@ -11,10 +11,10 @@
 
   @media (min-width: @desktop-width) {
     margin: 0 110px;
-    margin-bottom: 51px;
+    margin-bottom: 62px;
   }
 
-  .container--wrapper {
+  .container-wrapper {
     display: flex;
     flex-direction: column;
 
@@ -27,14 +27,12 @@
 
 .product__item {
   background-color: var(--basic-grey);
-  margin: 0;
   margin-bottom: 20px;
   position: relative;
 
-
   @media (min-width: @tablet-width) {
     width: 708px;
-    margin-bottom: 30px;
+    margin-bottom: 31px;
   }
 
   @media (min-width: @desktop-width) {
@@ -69,53 +67,47 @@
   }
 }
 
-.product__item:first-child::after {
-  content: "";
+.product__item-picture {
   position: absolute;
+  content: "";
   width: 36px;
   height: 50px;
-  background-image: url("../img/icon-cat-slim.svg");
-  background-repeat: no-repeat;
-  top: 21px;
-  left: 29px;
+  top: 20px;
+  left: 30px;
 
   @media (min-width: @tablet-width) {
     width: 140px;
     height: 192px;
-    left: 478px;
     top: 81px;
+    left: 476px;
   }
 
   @media (min-width: @desktop-width) {
-    width: 70px;
-    height: 97px;
-    left: 67px;
+    width: 95px;
+    height: 96px;
+    left: 54px;
     top: 41px;
   }
 }
 
-.product__item:last-child::after {
-  content: "";
-  position: absolute;
+.product__item-picture--position {
   width: 67px;
   height: 50px;
-  background-image: url("../img/icon-cat-pro.svg");
-  background-repeat: no-repeat;
-  top: 35px;
-  left: 13px;
+  top: 25px;
+  left: 10px;
 
   @media (min-width: @tablet-width) {
     width: 268px;
-    height: 112px;
+    height: 200px;
+    top: 90px;
     left: 411px;
-    top: 135px;
   }
 
   @media (min-width: @desktop-width) {
     width: 134px;
-    height: 56px;
+    height: 100px;
+    top: 45px;
     left: 33px;
-    top: 67px;
   }
 }
 
@@ -124,7 +116,6 @@
   line-height: 37px;
   font-size: 24px;
   font-weight: 400;
-  /*.main-text(24px; 37px);*/
   text-transform: uppercase;
   margin: 30px 34px 29px 91px;
 
@@ -159,7 +150,7 @@
     border: none;
   }
 
-  &--wrapper {
+  &--width {
     @media (min-width: @tablet-width) {
       width: 342px;
     }
@@ -170,7 +161,12 @@
   }
 }
 
-.product__link {
+.product__item--wrapper {
+  display: flex;
+  flex-direction: row;
+}
+
+.product__item-link {
   position: relative;
   .main-text(16px; 16px);
   display: block;
@@ -179,7 +175,7 @@
   text-decoration: none;
   color: var(--basic-black);
   margin-left: 20px;
-  margin-right: 100px;
+  /*margin-right: 100px;*/
   padding-top: 19px;
   padding-bottom: 22px;
 
@@ -196,38 +192,50 @@
   }
 }
 
-.product__link::before {
+.product__item-arrow-short {
+  display: block;
+  width: 24px;
+  height: 10px;
+}
+
+.product__item-arrow-long {
+  display: none;
+  width: 32px;
+  height: 12px;
+}
+
+.product__item-arrow-short,
+.product__item-arrow-long {
   content: "";
   position: absolute;
-  background-image: url("../img/icon-right-arrow-long.svg");
-  background-repeat: no-repeat;
-  width: 24px;
-  height: 12px;
-  bottom: 41%;
-  left: 100px;
+  bottom: 25px;
+  left: 119px;
 
   @media (min-width: @tablet-width) {
-    left: 133px;
-    top: 28px;
+    bottom: 67px;
+    left: 185px;
   }
 
   @media (min-width: @desktop-width) {
-    left: 133px;
-    top: 10px;
+    bottom: 69px;
+    left: 188px;
   }
 }
 
-.product__link:hover::before {
-  content: "";
-  position: absolute;
-  background-image: url("../img/icon-right-arrow-verylong.svg");
-  background-repeat: no-repeat;
-  width: 32px;
-  height: 10px;
-  bottom: 42%;
-  left: 189px;
+.product__item--wrapper:hover,
+.product__item--wrapper:focus {
+  .product__item-arrow-short {
+    display: none;
+  }
+
+  .product__item-arrow-long {
+    display: block;
+  }
 }
 
-.product__link:focus {
-  opacity: 0.3;
+.product__item--wrapper:active {
+  .product__item-link,
+  .product__item-arrow-long {
+    opacity: 0.3;
+  }
 }

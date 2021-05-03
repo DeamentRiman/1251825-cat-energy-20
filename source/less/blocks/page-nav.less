@@ -1,14 +1,15 @@
 // Начните писать стили здесь
-.page-nav {
+.page__header-nav {
+  position: relative;
   margin: 0;
   display: flex;
   flex-direction: column;
   align-items: center;
   width: 100%;
-  /*min-height: 66px;*/
   border-bottom: 1px solid var(--basic-whisper);
 
   @media (min-width: @tablet-width) {
+    margin-top: 20px;
     flex-direction: row;
     justify-content: space-between;
     width: 62%;
@@ -21,14 +22,11 @@
   }
 }
 
-.page-nav__toggle {
+.page-header__nav-toggle {
+  top: 10px;
+  right: 20px;
   display: flex;
-  width: 30%;
-  height: auto;
   border: none;
-  margin-left: 0;
-  /*margin-right: 20px;
-  /*cursor: pointer;*/
 
   @media (min-width: @tablet-width) {
     display: none;
@@ -39,7 +37,21 @@
   }
 }
 
-.page-nav--close .page-nav__list {
+.page-header__nav-toggle::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: -10px;
+  right: 0;
+  width: 26px;
+  height: 19px;
+  background-color: var(--basic-black);
+  box-shadow:
+    0 8px 0 var(--basic-black),
+    0 16px 0 var(--basic-black);
+}
+
+.page__header-nav--close .page__header-nav-list {
   display: none;
 
   @media (min-width: @tablet-width) {
@@ -51,51 +63,8 @@
   }
 }
 
-.page-nav--close .page-nav__toggle::before {
-  /*гамбургер для закрытого меню*/
-  content: "";
-  position: absolute;
-  background-image: url("../../img/icon-mobile-menu.svg");
-  background-repeat: no-repeat;
-  background-position-x: right;
-  width: 24px;
-  height: 16px;
-  top: 35%;
-  right: 6.25%;
-}
-
-.page-nav--active .page-nav__toggle {
-  content: "";
-  position: absolute;
-  background-image: url("../img/icon-close.svg");
-  background-repeat: no-repeat;
-  background-position-x: right;
-  background-color: transparent;
-  width: 18px;
-  height: 18px;
-  top: 9%;
-  right: 7.25%;
-
-  @media (min-width: @tablet-width) {
-    display: none;
-  }
-
-  @media (min-width: @desktop-width) {
-    display: none;
-  }
-}
-
-.page-nav--js .page-nav__toggle {
-  display: none;
-}
-
-.page-nav__list {
+.page__header-nav-list {
   width: 100%;
-  /*display: none;*/
-  /*width: 440px;
-  margin-left: 95px;
-  /*как обойтись без ширины?*/
-  /*margin-top: 18px;*/
 
   @media (min-width: @tablet-width) {
     display: flex;
@@ -108,11 +77,10 @@
     display: flex;
     justify-content: space-between;
     width: 100%;
-    /*margin-left: 540px;*/
   }
 }
 
-.page-nav__list--active {
+.page__header-nav--active {
   /*стиль для JS*/
   display: flex;
   flex-direction: column;
@@ -123,7 +91,7 @@
   }
 }
 
-.page-nav__list-item {
+.page__header-nav-list-item {
   .main-text(20px; 20px);
   color: var(--basic-black);
   font-weight: 500;
@@ -137,15 +105,14 @@
 
   @media (min-width: @tablet-width) {
     font-weight: 400;
-    .main-text (18px, 24px);
+    .main-text (18px, 16px);
     padding: 0;
     border-top: none;
   }
 
   @media (min-width: @desktop-width) {
     font-weight: 400;
-    .main-text (20px, 30px);
-    /*черный цвет оставлен временно для отладки стилей*/
+    .main-text (20px, 20px);
   }
 
   &:hover {
@@ -157,43 +124,39 @@
   }
 }
 
-.page-nav__list-item--wrapper {
+.page__header-nav-list-item--active {
   @media (min-width: @tablet-width) {
     color: var(--basic-black);
     padding-bottom: 10px;
     border-bottom: 2px solid var(--basic-green-button);
   }
-
-  .page-nav__list-link {
-    border-bottom: 2px solid var(--basic-green-button);
-  }
 }
 
-.page-nav__list-link {
+.page__header-nav-list-link {
   color: var(--basic-black);
   padding-bottom: 8px;
 }
 
-.page-nav__list--index {
-  .page-nav__list-link {
+.page__header-nav-list--index {
+  .page__header-nav-list-link {
     @media (min-width: @desktop-width) {
       color: var(--basic-font-white);
     }
   }
 
-  .page-nav__list-link:hover {
+  .page__header-nav-list-link:hover {
     @media (min-width: @desktop-width) {
       opacity: 0.6;
     }
   }
 
-  .page-nav__list-link:active {
+  .page__header-nav-list-link:active {
     @media (min-width: @desktop-width) {
       opacity: 0.3;
     }
   }
 
-  .page-nav__list-item--wrapper {
+  .page__header-nav-list-item--wrapper {
     @media (min-width: @desktop-width) {
       padding-bottom: 10px;
       border-bottom: 2px solid var(--basic-font-white);
