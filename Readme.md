@@ -1,5 +1,9 @@
 # Личный проект «Кэт энерджи» [![Build status][travis-image]][travis-url] [![Dependency status][dependency-image]][dependency-url]
 
+Проект  в рамках обучения на курсе в HTML Academy HTML и CSS уровень 2. Адаптивная вёрстка и автоматизация
+Ссылка на описание проекта: https://www.youtube.com/watch?v=1Jr2JZSRj84
+
+
 * Студент: [Svetlana Valdaeva](https://up.htmlacademy.ru/adaptive/20/user/1251825).
 * Наставник: [Анна Рус](https://htmlacademy.ru/profile/vanillawulf)
 
